@@ -1,0 +1,32 @@
+.App {
+  text-align: center;
+}
+.homeHeaderName {
+  text-shadow: 10px 10px 10px black;
+}
+
+.home {
+  background-color: #48386d;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.formgrid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+}
+
+.loginEmailBox {
+  margin: 10px;
+}
+
+.loginPasswordBox {
+  margin: 10px;
+}
