@@ -36,7 +36,7 @@ function App() {
           placeholder="Upload an image"
           onChange={uploadImage}
         />
-        {loading ? <h3>Loading...</h3> : <img src="" />}
+        {loading && <h3>Please wait...</h3>}
       </div>
       <br></br>
       <section>
