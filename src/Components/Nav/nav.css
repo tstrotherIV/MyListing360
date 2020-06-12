@@ -10,6 +10,7 @@ nav .container {
   margin-bottom: 0;
   background: #2d92f1;
   border: black 1px solid;
+  margin-top: 1px;
 }
 
 nav .container li {
@@ -41,4 +42,17 @@ nav .container li {
 a:link {
   /* Essentially means a[href], or that the link actually goes somewhere */
   color: red;
+}
+
+.userIdName {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  font-size: 0.8em;
+}
+
+.navbarLogo {
+  align-content: left;
 }
