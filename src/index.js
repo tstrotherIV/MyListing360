@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./Components/App";
-// import Site360Home from "./Components/Site360";
+// import App from "./Components/App";
+import Site360 from "./Components/Site360";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Site360 />
   </React.StrictMode>,
   document.getElementById("root")
 );

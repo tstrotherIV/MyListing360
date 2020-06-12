@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Site360.css";
-import NavBar from "./Components/Nav/NavBar";
+// import NavBar from "./Components/Nav/NavBar";
 import ApplicationViews from "./ApplicationViews";
 
 const Site360Home = () => {
@@ -20,7 +20,7 @@ const Site360Home = () => {
 
   return (
     <>
-      <NavBar hasUser={hasUser} clearUser={clearUser} />
+      {/* <NavBar hasUser={hasUser} clearUser={clearUser} /> */}
       <ApplicationViews hasUser={hasUser} setUser={setUser} />
     </>
   );
