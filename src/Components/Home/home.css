@@ -1,0 +1,39 @@
+.posRight {
+  justify-content: right;
+}
+
+.AccessSect {
+  display: flex;
+  flex-direction: row;
+  margin-left: 4px;
+  margin-right: 8px;
+  justify-content: flex-end;
+}
+
+.CreateAccSect {
+  display: flex;
+  flex-direction: row;
+  margin-left: 4px;
+  margin-top: 8px;
+}
+.signInBtn {
+  display: flex;
+  flex-direction: row;
+  margin-left: 4px;
+  margin-top: 8px;
+}
+
+.space4px {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.BGDimg {
+  background-image: url("https://res.cloudinary.com/duo4xxmj8/image/upload/v1591983396/Site360%20Static%20Images/HomePgBGDimg_u56vmj.jpg");
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 940px;
+  width: auto;
+  flex-shrink: inherit;
+}
