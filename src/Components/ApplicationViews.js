@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import React from "react";
 import HomePage from "./Home/home";
+import Login from "./Auth/login";
 
 const ApplicationViews = (props) => {
   const hasUser = props.hasUser;
@@ -9,9 +10,16 @@ const ApplicationViews = (props) => {
   return (
     <Router>
       <Route
+        exact
         path="/"
         render={(props) => {
           return <HomePage setUser={setUser} {...props} />;
+        }}
+      />
+      <Route
+        path="/login"
+        render={(props) => {
+          return <Login setUser={setUser} {...props} />;
         }}
       />
     </Router>

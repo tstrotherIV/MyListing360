@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./login.css";
 
 const Login = (props) => {
   const [credentials, setCredentials] = useState({ email: "", password: "" });
@@ -19,29 +20,38 @@ const Login = (props) => {
 
   return (
     <form onSubmit={handleLogin}>
-      <fieldset>
-        <h3>Please sign in</h3>
-        <div className="formgrid">
+      <fieldset className="loginFrom center">
+        <section className="loginAccessSect ">
+          <section className="loginCreateAccSect ">
+            <div className="logincreateAccBtn">Don't have an account?</div>
+            <div className="logincreateAccHyperlink space4px">
+              Create Account
+            </div>
+          </section>
+        </section>
+        <div className="loginformFields">
           <input
             onChange={handleFieldChange}
             type="email"
             id="email"
-            placeholder="Email address"
+            placeholder="Enter Username/Email"
             required=""
             autoFocus=""
           />
-          <label htmlFor="inputEmail">Email address</label>
+          {/* <label htmlFor="inputEmail">Email address</label> */}
 
           <input
             onChange={handleFieldChange}
             type="password"
             id="password"
-            placeholder="Password"
+            placeholder="Enter Password"
             required=""
           />
-          <label htmlFor="inputPassword">Password</label>
+          {/* <label htmlFor="inputPassword">Password</label> */}
         </div>
-        <button type="submit">Sign in</button>
+        <button className="signInBtn" type="submit">
+          Sign in
+        </button>
       </fieldset>
     </form>
   );
