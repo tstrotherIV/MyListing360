@@ -1,6 +1,7 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
-import { Link } from "react-router-dom";
+// import { withRouter } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
+import "./nav.css";
 
 const NavBar = (props) => {
   const handleLogout = () => {
@@ -9,38 +10,48 @@ const NavBar = (props) => {
   };
 
   return (
-    <nav className="contentRight">
-      {props.hasUser ? (
-        <ul className="container">
-          <div className="navbarLogo">Logo Here</div>
-          <li>
-            <Link className="nav-link" to="/home">
-              {" "}
-              Home{" "}
-            </Link>
-          </li>
-          <li>
-            <Link className="nav-link" to="/tours">
-              {" "}
-              Tours{" "}
-            </Link>
-          </li>
-          <li>
-            <Link className="nav-link" to="/account">
-              {" "}
-              Account{" "}
-            </Link>
-          </li>
-          <li>
-            <span className="nav-link" onClick={handleLogout}>
-              {" "}
-              Logout{" "}
-            </span>
-          </li>
-        </ul>
-      ) : null}
-    </nav>
+    <Router>
+      <nav className="contentRight">
+        {props.hasUser ? (
+          <ul className="container">
+            <div className="navbarLogo">
+              <img
+                className="logoImg"
+                src="https://res.cloudinary.com/duo4xxmj8/image/upload/v1591990304/Site360%20Static%20Images/navbarLogo_rspfdq.png"
+                width="200"
+                height="auto"
+                alt="new"
+              />
+            </div>
+            <li>
+              <Link className="nav-link" to="/">
+                {" "}
+                Home{" "}
+              </Link>
+            </li>
+            <li>
+              <Link className="nav-link" to="/tours">
+                {" "}
+                Tours{" "}
+              </Link>
+            </li>
+            <li>
+              <Link className="nav-link" to="/account">
+                {" "}
+                Account{" "}
+              </Link>
+            </li>
+            <li>
+              <span className="nav-link" onClick={handleLogout}>
+                {" "}
+                Logout{" "}
+              </span>
+            </li>
+          </ul>
+        ) : null}
+      </nav>
+    </Router>
   );
 };
 
-export default withRouter(NavBar);
+export default NavBar;
