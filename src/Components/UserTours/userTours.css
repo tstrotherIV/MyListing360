@@ -1,0 +1,54 @@
+.bgBlueTheme {
+  background: #2d92f19e;
+}
+.noBtnBorder {
+  border: none;
+}
+
+.blueDevideLine {
+  border: 3px solid #2d92f19e;
+  width: 1800px;
+  margin: 2px;
+}
+
+.centerItem {
+  display: flex;
+  justify-content: center;
+}
+
+.tourFilterBoxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.createTour {
+  width: 1000px;
+  padding: 4px;
+  color: white;
+  /* text-shadow: #000 1px 1px 1px; */
+  font-size: 1.5em;
+}
+
+.filterByNameBox {
+  width: 400px;
+  margin-left: 40px;
+  /* flex-basis: 50%; */
+}
+.trashCanBtn {
+  width: 400px;
+  margin-right: 40px;
+  /* flex-basis: 50%; */
+}
+
+.createdVirtualToursHead {
+  margin: 4px;
+  padding: 4px;
+}
+
+.tourDisplaySect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
