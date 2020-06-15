@@ -1,14 +1,16 @@
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import React from "react";
 import HomePage from "./Home/home";
 import Login from "./Auth/login";
 import UserTours from "./UserTours/userTours";
 import ImageUpload from "./tourCreator/imageUpload/imageUpload";
-import CreateTour from "./tourCreator/createTour/tourCreator";
+import CreatephotoAlbum from "./tourCreator/createTour/tourCreator";
 
 const ApplicationViews = (props) => {
   const hasUser = props.hasUser;
   const setUser = props.setUser;
+
+  const userId = 1;
 
   return (
     <Router>
@@ -32,15 +34,34 @@ const ApplicationViews = (props) => {
         }}
       />
       <Route
-        path="/imageUpload"
+        path="/createphotoAlbum"
         render={(props) => {
-          return <ImageUpload setUser={setUser} {...props} />;
+          return (
+            <CreatephotoAlbum setUser={setUser} userId={userId} {...props} />
+          );
         }}
       />
-      <Route
-        path="/createTour"
+      {/* <Route
+        exact
+        path="/imageUpload"
         render={(props) => {
-          return <CreateTour setUser={setUser} {...props} />;
+          return <ImageUpload setUser={setUser} userId={userId} {...props} />;
+        }}
+      /> */}
+      <Route
+        path="/imageUpload/:photoAlbumId(\d+)/"
+        render={(props) => {
+          if (hasUser) {
+            return (
+              <ImageUpload
+                photoAlbumId={parseInt(props.match.params.photoAlbumId)}
+                userId={userId}
+                {...props}
+              />
+            );
+          } else {
+            return <Redirect to="/login" />;
+          }
         }}
       />
     </Router>

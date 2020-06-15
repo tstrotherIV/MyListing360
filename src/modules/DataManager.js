@@ -32,4 +32,13 @@ export default {
       body: JSON.stringify(editedMedia),
     }).then((data) => data.json());
   },
+  postNewImage(newMedia) {
+    return fetch(`${remoteURL}/360images/`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newMedia),
+    }).then((data) => data.json());
+  },
 };

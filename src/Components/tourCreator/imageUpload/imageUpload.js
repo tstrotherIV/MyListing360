@@ -1,10 +1,36 @@
 import React, { useState } from "react";
+import DataManager from "../../../modules/DataManager";
 import "aframe";
 import "./imageUpload.css";
 
-function ImageUpload() {
-  const [image, setImage] = useState("");
+function ImageUpload(props) {
+  const [image, setImage] = useState();
   const [loading, setLoading] = useState(false);
+  const [photoAlbum, setphotoAlbum] = useState({
+    userId: props.userId,
+    albumId: props.photoAlbumId,
+    name: "",
+    description: "",
+    url: "",
+  });
+
+  const handleFieldChange = (evt) => {
+    const stateToChange = { ...photoAlbum };
+    stateToChange[evt.target.id] = evt.target.value;
+    setphotoAlbum(stateToChange);
+  };
+
+  const addNewImage = (evt) => {
+    evt.preventDefault();
+    if (image === "") {
+      window.alert("Please select a 360 Image to Upload");
+    } else {
+      setLoading(true);
+      DataManager.postNewImage(photoAlbum).then(() =>
+        props.history.push("/tours")
+      );
+    }
+  };
 
   const uploadImage = async (e) => {
     const files = e.target.files;
@@ -22,6 +48,7 @@ function ImageUpload() {
     const file = await res.json();
 
     setImage(file.secure_url);
+    setphotoAlbum((photoAlbum.url = file.url));
     setLoading(false);
   };
 
@@ -37,13 +64,35 @@ function ImageUpload() {
         />
         {loading && <h3>Please wait...</h3>}
       </div>
+      <div className="addImageFormFields">
+        <input
+          onChange={handleFieldChange}
+          type="text"
+          id="name"
+          placeholder="Name your Image (eg: Living Room)"
+        />
+
+        <input
+          onChange={handleFieldChange}
+          type="text"
+          id="description"
+          placeholder="Enter a Description for the Room (eg: “square footage, number of rooms…”) "
+          required
+        />
+      </div>
       <br></br>
-      <section className="imageReturnFunc">
+      <section className="">
         <div className="imageSaveBtn">
-          <button type="button" className="right" disabled={""} onClick={""}>
+          <button
+            type="button"
+            className="right"
+            disabled={""}
+            onClick={addNewImage}
+          >
             Add Image to my tour!
           </button>
         </div>
+
         <section>
           <a-scene class="aframebox" embedded>
             <a-sky src={image}></a-sky>

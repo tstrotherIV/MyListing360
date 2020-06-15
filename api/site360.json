@@ -24,6 +24,36 @@
       "title": "2nd Tour",
       "description": "Add images",
       "id": 3
+    },
+    {
+      "title": "new tour",
+      "description": "asdfasdf",
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "title": "user2",
+      "description": "User 2 Tour",
+      "userId": 2,
+      "id": 5
+    },
+    {
+      "title": "test",
+      "description": "asdf",
+      "userId": 1,
+      "id": 6
+    },
+    {
+      "title": "First Tour",
+      "description": "asdf",
+      "userId": 1,
+      "id": 7
+    },
+    {
+      "title": "Examples",
+      "description": "ads",
+      "userId": 1,
+      "id": 8
     }
   ],
   "360images": [
@@ -33,6 +63,55 @@
       "name": "Living Room",
       "description": "300 sqft",
       "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592235044/360imgFolder/living_room_mmyzrt.jpg"
+    },
+    {
+      "userId": 1,
+      "albumId": 8,
+      "name": "downstairs room",
+      "description": "its big",
+      "url": "",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "albumId": 8,
+      "name": "Downstairs",
+      "description": "asdfsad",
+      "url": {
+        "image": ""
+      },
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "albumId": 8,
+      "name": "asdfasd",
+      "description": "asdfasdf",
+      "url": "",
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "albumId": 8,
+      "name": "asdf",
+      "description": "asdf",
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "albumId": 8,
+      "name": "",
+      "description": "",
+      "url": "",
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "albumId": 8,
+      "name": "",
+      "description": "",
+      "url": {},
+      "id": 7
     }
   ]
 }
