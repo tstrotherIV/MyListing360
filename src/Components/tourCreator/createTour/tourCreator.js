@@ -2,29 +2,29 @@ import React, { useState } from "react";
 import DataManager from "../../../modules/DataManager";
 import "./tourCreator.css";
 
-const CreateTour = (props) => {
-  const [tour, setTour] = useState({ title: "", description: "" });
+const CreatephotoAlbum = (props) => {
+  const [photoAlbum, setphotoAlbum] = useState({
+    title: "",
+    description: "",
+    userId: props.userId,
+  });
   const [isLoading, setIsLoading] = useState(false);
 
-  // const getTours = () => {
-  //   return DataManager.getAll().then((emps) => {
-  //     setTour(emps);
-  //   });
-  // };
-
   const handleFieldChange = (evt) => {
-    const stateToChange = { ...tour };
+    const stateToChange = { ...photoAlbum };
     stateToChange[evt.target.id] = evt.target.value;
-    setTour(stateToChange);
+    setphotoAlbum(stateToChange);
   };
 
-  const constructNewTour = (evt) => {
+  const constructNewphotoAlbum = (evt) => {
     evt.preventDefault();
-    if (tour.title === "" || tour.description === "") {
+    if (photoAlbum.title === "" || photoAlbum.description === "") {
       window.alert("Please fill at the fields before moving forward");
     } else {
       setIsLoading(true);
-      DataManager.post(tour).then(() => props.history.push("/imageUpload"));
+      DataManager.post(photoAlbum).then((newTourFromDb) =>
+        props.history.push(`/imageUpload/${newTourFromDb.id}`)
+      );
     }
   };
   return (
@@ -50,7 +50,11 @@ const CreateTour = (props) => {
           />
         </div>
         <div className="alignRight">
-          <button type="button" disabled={isLoading} onClick={constructNewTour}>
+          <button
+            type="button"
+            disabled={isLoading}
+            onClick={constructNewphotoAlbum}
+          >
             Save and Add 360 Images to your tour!
           </button>
         </div>
@@ -59,4 +63,4 @@ const CreateTour = (props) => {
   );
 };
 
-export default CreateTour;
+export default CreatephotoAlbum;
