@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "James",
+      "lastname": "Decker",
+      "email": "james.decker@jamesdecker.com",
+      "password": 1234
+    }
+  ],
+  "photoAlbums": [
+    {
+      "id": 1,
+      "userId": 1,
+      "title": "1234 Turn Down Ln",
+      "description": "large house on 4 acres"
+    }
+  ],
+  "360images": [
+    {
+      "id": 1,
+      "albumId": 1,
+      "name": "Living Room",
+      "description": "300 sqft",
+      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592235044/360imgFolder/living_room_mmyzrt.jpg"
+    }
+  ]
+}
