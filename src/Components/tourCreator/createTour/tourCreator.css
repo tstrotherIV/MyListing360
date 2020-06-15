@@ -1,0 +1,66 @@
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+}
+
+.posRight {
+  justify-content: right;
+}
+
+.cntrContent {
+  justify-content: center;
+}
+
+.createTourHead {
+  display: flex;
+  flex-direction: row;
+  margin-left: 4px;
+  margin-right: 8px;
+  justify-content: center;
+}
+
+.loginCreateAccSect {
+  display: flex;
+  flex-direction: row;
+  margin-left: 4px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.loginsignInBtn {
+  display: flex;
+  flex-direction: row;
+  margin-left: 4px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.space4px {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.createTourFormFields {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#title {
+  margin: 4px;
+  width: 600px;
+  height: 40px;
+  text-align: center;
+}
+#description {
+  margin: 4px;
+  width: 600px;
+  height: 40px;
+  text-align: center;
+}
+
+.saveTourBtn {
+  justify-items: right;
+}

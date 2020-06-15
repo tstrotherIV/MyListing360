@@ -4,6 +4,7 @@ import HomePage from "./Home/home";
 import Login from "./Auth/login";
 import UserTours from "./UserTours/userTours";
 import ImageUpload from "./tourCreator/imageUpload/imageUpload";
+import CreateTour from "./tourCreator/createTour/tourCreator";
 
 const ApplicationViews = (props) => {
   const hasUser = props.hasUser;
@@ -34,6 +35,12 @@ const ApplicationViews = (props) => {
         path="/imageUpload"
         render={(props) => {
           return <ImageUpload setUser={setUser} {...props} />;
+        }}
+      />
+      <Route
+        path="/createTour"
+        render={(props) => {
+          return <CreateTour setUser={setUser} {...props} />;
         }}
       />
     </Router>
