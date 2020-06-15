@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "aframe";
-import "./App.css";
+import "./imageUpload.css";
 
-function App() {
+function ImageUpload() {
   const [image, setImage] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -38,13 +38,20 @@ function App() {
         {loading && <h3>Please wait...</h3>}
       </div>
       <br></br>
-      <section>
-        <a-scene class="aframebox" embedded>
-          <a-sky src={image}></a-sky>
-        </a-scene>
+      <section className="imageReturnFunc">
+        <div className="imageSaveBtn">
+          <button type="button" className="right" disabled={""} onClick={""}>
+            Add Image to my tour!
+          </button>
+        </div>
+        <section>
+          <a-scene class="aframebox" embedded>
+            <a-sky src={image}></a-sky>
+          </a-scene>
+        </section>
       </section>
     </div>
   );
 }
 
-export default App;
+export default ImageUpload;
