@@ -31,6 +31,7 @@ const Login = (props) => {
         ) {
           sessionStorage.setItem("loggedUser", user[0].id);
           let loggedUser = sessionStorage.getItem(`loggedUser`);
+          props.setUser(loggedUser);
 
           props.history.push(`/tours/${loggedUser}`);
         }

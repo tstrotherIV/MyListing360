@@ -6,11 +6,13 @@ import ApplicationViews from "./ApplicationViews";
 
 const Site360Home = (props) => {
   const isAuthenticated = () => sessionStorage.getItem("loggedUser") !== null;
+  const loggedUserId = sessionStorage.getItem("loggedUser");
+  console.log(loggedUserId);
 
   const [hasUser, setHasUser] = useState(isAuthenticated());
 
   const setUser = (user) => {
-    sessionStorage.setItem("loggedUser", JSON.stringify(user));
+    sessionStorage.setItem("loggedUserId", JSON.stringify(user));
     setHasUser(isAuthenticated());
   };
 
@@ -22,7 +24,11 @@ const Site360Home = (props) => {
   return (
     <>
       <NavBar hasUser={hasUser} clearUser={clearUser} />
-      <ApplicationViews hasUser={hasUser} setUser={setUser} />
+      <ApplicationViews
+        hasUser={hasUser}
+        setUser={setUser}
+        userId={loggedUserId}
+      />
     </>
   );
 };
