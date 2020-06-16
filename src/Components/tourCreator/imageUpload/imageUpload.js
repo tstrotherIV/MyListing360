@@ -26,7 +26,9 @@ function ImageUpload(props) {
       window.alert("Please select a 360 Image to Upload");
     } else {
       setLoading(true);
-      DataManager.postNewImage(photoAlbum).then(() =>
+      const newAlbum = { ...photoAlbum };
+      newAlbum.url = image;
+      DataManager.postNewImage(newAlbum).then(() =>
         props.history.push("/tours")
       );
     }
@@ -48,7 +50,6 @@ function ImageUpload(props) {
     const file = await res.json();
 
     setImage(file.secure_url);
-    setphotoAlbum((photoAlbum.url = file.url));
     setLoading(false);
   };
 
