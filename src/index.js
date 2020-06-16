@@ -3,10 +3,11 @@ import ReactDOM from "react-dom";
 import "./index.css";
 // import App from "./Components/App";
 import Site360 from "./Components/Site360";
+import { BrowserRouter as Router } from "react-router-dom";
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Router>
     <Site360 />
-  </React.StrictMode>,
+  </Router>,
   document.getElementById("root")
 );
