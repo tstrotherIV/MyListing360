@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import "./userTours.css";
 
 const UserTours = () => {
+  const [albumName, setAlbumName] = useState({ name: "" });
+
+  const handleFieldChange = (evt) => {
+    const stateToChange = { ...albumName };
+    stateToChange[evt.target.id] = evt.target.value;
+    setAlbumName(stateToChange);
+  };
+
   return (
     <>
       <section className="pgContainer">
@@ -9,14 +18,19 @@ const UserTours = () => {
           <h5>Virtual Tour Dashboard</h5>
         </div>
         <div className="centerItem">
-          <button className="createTour bgBlueTheme noBtnBorder" type="button">
-            + Create a New Virtual Tour of my Real Estate Listing
-          </button>
+          <NavLink to="/createphotoAlbum">
+            <button
+              className="createTour bgBlueTheme noBtnBorder button1"
+              type="button"
+            >
+              + Create a New Virtual Tour of my Real Estate Listing
+            </button>
+          </NavLink>
         </div>
         <section className="tourFilterAndTrash">
           <div className="tourFilterBoxes centerItem">
             <input
-              onChange={""}
+              onChange={handleFieldChange}
               type="filterName"
               className="filterByNameBox"
               id="filterByName"

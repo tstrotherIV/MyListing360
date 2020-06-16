@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./home.css";
 
 const HomePage = () => {
@@ -11,7 +12,9 @@ const HomePage = () => {
             <div className="createAccHyperlink space4px">Create Account</div>
           </section>
           <section className="signInBtn">
-            <button type="button">Sign In</button>
+            <NavLink to="/login">
+              <button type="button">Sign In</button>
+            </NavLink>
           </section>
         </section>
       </section>

@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 import React from "react";
 import HomePage from "./Home/home";
 import Login from "./Auth/login";
@@ -13,7 +13,7 @@ const ApplicationViews = (props) => {
   const userId = 1;
 
   return (
-    <Router>
+    <React.Fragment>
       <Route
         exact
         path="/"
@@ -22,15 +22,23 @@ const ApplicationViews = (props) => {
         }}
       />
       <Route
-        path="/login"
-        render={(props) => {
-          return <Login setUser={setUser} {...props} />;
-        }}
-      />
-      <Route
+        exact
         path="/tours"
         render={(props) => {
           return <UserTours setUser={setUser} {...props} />;
+        }}
+      />
+      <Route
+        exact
+        path="/tours/:userId(\d+)/"
+        render={(props) => {
+          return <UserTours setUser={setUser} {...props} />;
+        }}
+      />
+      <Route
+        path="/login"
+        render={(props) => {
+          return <Login setUser={setUser} {...props} />;
         }}
       />
       <Route
@@ -41,13 +49,7 @@ const ApplicationViews = (props) => {
           );
         }}
       />
-      {/* <Route
-        exact
-        path="/imageUpload"
-        render={(props) => {
-          return <ImageUpload setUser={setUser} userId={userId} {...props} />;
-        }}
-      /> */}
+
       <Route
         path="/imageUpload/:photoAlbumId(\d+)/"
         render={(props) => {
@@ -64,7 +66,7 @@ const ApplicationViews = (props) => {
           }
         }}
       />
-    </Router>
+    </React.Fragment>
   );
 };
 

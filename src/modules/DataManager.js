@@ -41,4 +41,9 @@ export default {
       body: JSON.stringify(newMedia),
     }).then((data) => data.json());
   },
+  getUser(username) {
+    return fetch(`${remoteURL}/users?q=${username}`).then((result) =>
+      result.json()
+    );
+  },
 };

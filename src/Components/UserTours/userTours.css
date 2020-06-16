@@ -52,3 +52,9 @@
   flex-direction: column;
   align-items: center;
 }
+
+.button1:hover {
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
