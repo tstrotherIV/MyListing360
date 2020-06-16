@@ -23,34 +23,16 @@
       "description": "large house on 4 acres"
     },
     {
-      "title": "new tour",
-      "description": "asdfasdf",
-      "userId": 1,
-      "id": 4
-    },
-    {
-      "title": "user2",
-      "description": "User 2 Tour",
-      "userId": 2,
-      "id": 5
-    },
-    {
-      "title": "test",
+      "title": "First Tour",
       "description": "asdf",
-      "userId": 1,
-      "id": 6
+      "userId": "\"2\"",
+      "id": 2
     },
     {
       "title": "First Tour",
       "description": "asdf",
-      "userId": 1,
-      "id": 7
-    },
-    {
-      "title": "Examples",
-      "description": "ads",
-      "userId": 1,
-      "id": 8
+      "userId": 2,
+      "id": 3
     }
   ],
   "360images": [
