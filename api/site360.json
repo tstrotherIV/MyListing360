@@ -75,43 +75,10 @@
     {
       "userId": 1,
       "albumId": 8,
-      "name": "Downstairs",
-      "description": "asdfsad",
-      "url": {
-        "image": ""
-      },
-      "id": 3
-    },
-    {
-      "userId": 1,
-      "albumId": 8,
-      "name": "asdfasd",
-      "description": "asdfasdf",
-      "url": "",
+      "name": "",
+      "description": "",
+      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592317375/360imgFolder/euxhndw9l3immbncddom.jpg",
       "id": 4
-    },
-    {
-      "userId": 1,
-      "albumId": 8,
-      "name": "asdf",
-      "description": "asdf",
-      "id": 5
-    },
-    {
-      "userId": 1,
-      "albumId": 8,
-      "name": "",
-      "description": "",
-      "url": "",
-      "id": 6
-    },
-    {
-      "userId": 1,
-      "albumId": 8,
-      "name": "",
-      "description": "",
-      "url": {},
-      "id": 7
     }
   ]
 }
