@@ -5,6 +5,7 @@ import Login from "./Auth/login";
 import UserTours from "./UserTours/userTours";
 import ImageUpload from "./tourCreator/imageUpload/imageUpload";
 import CreatephotoAlbum from "./tourCreator/createTour/tourCreator";
+import TourCard from "./tourCard/tourCard";
 
 const ApplicationViews = (props) => {
   const hasUser = props.hasUser;
@@ -48,6 +49,13 @@ const ApplicationViews = (props) => {
           return (
             <CreatephotoAlbum setUser={setUser} userId={userId} {...props} />
           );
+        }}
+      />
+      <Route
+        exact
+        path="/tourCard"
+        render={(props) => {
+          return <TourCard setUser={setUser} userId={userId} {...props} />;
         }}
       />
 

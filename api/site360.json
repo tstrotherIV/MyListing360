@@ -25,7 +25,7 @@
     {
       "title": "First Tour",
       "description": "asdf",
-      "userId": "\"2\"",
+      "userId": 2,
       "id": 2
     },
     {
