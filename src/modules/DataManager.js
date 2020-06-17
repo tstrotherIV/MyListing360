@@ -46,4 +46,9 @@ export default {
       result.json()
     );
   },
+  getUsersTours(resource, userId) {
+    return fetch(`${remoteURL}/${resource}?userId=${userId}`).then((result) =>
+      result.json()
+    );
+  },
 };
