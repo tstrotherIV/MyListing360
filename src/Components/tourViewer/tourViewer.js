@@ -6,14 +6,15 @@ import "./tourViewer.css";
 const TourViewer = (props) => {
   const [images, setImages] = useState([]);
 
-  const getTour = () => {
+  const getTourImages = () => {
     return DataManager.getTourImages(props.tourId).then((imagesfromDb) => {
-      setImages(imagesfromDb);
+      setImages(imagesfromDb.VRimages);
+      console.log(imagesfromDb);
     });
   };
 
   useEffect(() => {
-    getTour();
+    getTourImages();
   }, []);
 
   return (
@@ -25,8 +26,10 @@ const TourViewer = (props) => {
         </a-scene>
       </section>
       <section className="tourImageLinks">
-        {images.VRimages.map((image) => (
-          <button>Image: {image.url}</button>
+        {images.map((image) => (
+          <button key={image.id} id={image.id} value={image.url}>
+            Image
+          </button>
         ))}
       </section>
     </div>
