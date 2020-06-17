@@ -51,4 +51,9 @@ export default {
       result.json()
     );
   },
+  getTourImages(tourId) {
+    return fetch(
+      `${remoteURL}/photoAlbums/${tourId}?_embed=VRimages`
+    ).then((result) => result.json());
+  },
 };

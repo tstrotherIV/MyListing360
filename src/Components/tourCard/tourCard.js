@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./tourCard.css";
 
 const TourCard = (props) => {
@@ -14,7 +15,9 @@ const TourCard = (props) => {
       </section>
       <section className="tourCrudBtns">
         <div className="tourEditBtns">
-          <button className="viewTourBtn gap">View Tour</button>
+          <Link to={`/tourViewer/${props.tour.id}`}>
+            <button className="viewTourBtn gap">View Tour</button>
+          </Link>
           <button className="editTourBtn gap">Edit Tour</button>
           <button className="deleteTourBtn gap">Delete Tour</button>
         </div>
