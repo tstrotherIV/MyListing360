@@ -77,9 +77,24 @@ const ApplicationViews = (props) => {
         }}
       />
       <Route
+        exact
         path="/tourViewer"
         render={(props) => {
           return <TourViewer setUser={setUser} userId={userId} {...props} />;
+        }}
+      />
+      <Route
+        exact
+        path="/tourViewer/:tourId(\d+)/"
+        render={(props) => {
+          return (
+            <TourViewer
+              setUser={setUser}
+              userId={userId}
+              tourId={parseInt(props.match.params.tourId)}
+              {...props}
+            />
+          );
         }}
       />
     </React.Fragment>

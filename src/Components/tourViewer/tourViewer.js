@@ -1,23 +1,19 @@
 import React, { useState, useEffect } from "react";
 import "aframe";
+import DataManager from "../../modules/DataManager";
 import "./tourViewer.css";
 
-const TourViewer = () => {
-  const [image, setImage] = useState({ url: "" });
+const TourViewer = (props) => {
+  const [images, setImages] = useState([]);
 
-  const handleFieldChange = (evt) => {
-    const stateToChange = evt.target.value;
-    setImage(stateToChange);
-  };
-
-  const initialLoad = () => {
-    setImage(
-      "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592317375/360imgFolder/euxhndw9l3immbncddom.jpg"
-    );
+  const getTour = () => {
+    return DataManager.getTourImages(props.tourId).then((imagesfromDb) => {
+      setImages(imagesfromDb);
+    });
   };
 
   useEffect(() => {
-    initialLoad();
+    getTour();
   }, []);
 
   return (
@@ -25,31 +21,13 @@ const TourViewer = () => {
       <h2 className="tourNameHeader">Tour Name</h2>
       <section className="vrImageViewer">
         <a-scene class="aframebox" embedded>
-          <a-sky src={image}></a-sky>
+          <a-sky src="https://res.cloudinary.com/duo4xxmj8/image/upload/v1592420440/360imgFolder/img2_trupbj.jpg"></a-sky>
         </a-scene>
       </section>
       <section className="tourImageLinks">
-        <button
-          className="360Image"
-          onClick={handleFieldChange}
-          value="https://res.cloudinary.com/duo4xxmj8/image/upload/v1592317375/360imgFolder/euxhndw9l3immbncddom.jpg"
-        >
-          Image 1
-        </button>
-        <button
-          className="360Image"
-          onClick={handleFieldChange}
-          value="https://res.cloudinary.com/duo4xxmj8/image/upload/v1592416156/360imgFolder/beach_gba7dm.jpg"
-        >
-          Image 2
-        </button>
-        <button
-          className="360Image"
-          onClick={handleFieldChange}
-          value="https://res.cloudinary.com/duo4xxmj8/image/upload/v1592420440/360imgFolder/img2_trupbj.jpg"
-        >
-          Image 3
-        </button>
+        {images.VRimages.map((image) => (
+          <button>Image: {image.url}</button>
+        ))}
       </section>
     </div>
   );
