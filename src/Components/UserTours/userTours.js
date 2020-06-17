@@ -1,15 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import TourCard from "../tourCard/tourCard";
+import DataManager from "../../modules/DataManager";
 import "./userTours.css";
 
-const UserTours = () => {
-  const [albumName, setAlbumName] = useState({ name: "" });
+const UserTours = (props) => {
+  const [tours, setTours] = useState([]);
 
-  const handleFieldChange = (evt) => {
-    const stateToChange = { ...albumName };
-    stateToChange[evt.target.id] = evt.target.value;
-    setAlbumName(stateToChange);
+  // const handleFieldChange = (evt) => {
+  //   const stateToChange = { ...tourName };
+  //   stateToChange[evt.target.id] = evt.target.value;
+  //   setTourName(stateToChange);
+  // };
+
+  const getTours = () => {
+    return DataManager.getAll("photoAlbums").then((toursFromAPI) => {
+      setTours(toursFromAPI);
+    });
   };
+
+  useEffect(() => {
+    getTours();
+  }, []);
 
   return (
     <>
@@ -30,7 +42,7 @@ const UserTours = () => {
         <section className="tourFilterAndTrash">
           <div className="tourFilterBoxes centerItem">
             <input
-              onChange={handleFieldChange}
+              // onChange=""
               type="filterName"
               className="filterByNameBox"
               id="filterByName"
@@ -45,11 +57,11 @@ const UserTours = () => {
           <h5 className="createdVirtualToursHead">Created Virtual Tours</h5>
           <hr className="blueDevideLine"></hr>
           <section className="tourDisplaySect">
-            <h5>(...Below is placeholder text...)</h5>
-            <h4>You don’t have any Virtual Tours</h4>
-            <h4>
-              Click Here to create a Virtual Tour of your Real Estate Listing
-            </h4>
+            <div className="container-cards">
+              {tours.map((tour) => (
+                <TourCard key={tour.id} tour={tour} {...props} />
+              ))}
+            </div>
           </section>
         </section>
       </section>
