@@ -14,9 +14,11 @@ const UserTours = (props) => {
   // };
 
   const getTours = () => {
-    return DataManager.getAll("photoAlbums").then((toursFromAPI) => {
-      setTours(toursFromAPI);
-    });
+    return DataManager.getUsersTours("photoAlbums", props.userId).then(
+      (toursFromAPI) => {
+        setTours(toursFromAPI);
+      }
+    );
   };
 
   useEffect(() => {
@@ -56,6 +58,7 @@ const UserTours = (props) => {
           </div>
           <h5 className="createdVirtualToursHead">Created Virtual Tours</h5>
           <hr className="blueDevideLine"></hr>
+
           <section className="tourDisplaySect">
             <div className="container-cards">
               {tours.map((tour) => (

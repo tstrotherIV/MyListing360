@@ -6,6 +6,7 @@ import UserTours from "./UserTours/userTours";
 import ImageUpload from "./tourCreator/imageUpload/imageUpload";
 import CreatephotoAlbum from "./tourCreator/createTour/tourCreator";
 import TourCard from "./tourCard/tourCard";
+import TourViewer from "./tourViewer/tourViewer";
 
 const ApplicationViews = (props) => {
   const hasUser = props.hasUser;
@@ -34,7 +35,7 @@ const ApplicationViews = (props) => {
         exact
         path="/tours/:userId(\d+)/"
         render={(props) => {
-          return <UserTours setUser={setUser} {...props} />;
+          return <UserTours setUser={setUser} userId={userId} {...props} />;
         }}
       />
       <Route
@@ -73,6 +74,12 @@ const ApplicationViews = (props) => {
           } else {
             return <Redirect to="/login" />;
           }
+        }}
+      />
+      <Route
+        path="/tourViewer"
+        render={(props) => {
+          return <TourViewer setUser={setUser} userId={userId} {...props} />;
         }}
       />
     </React.Fragment>
