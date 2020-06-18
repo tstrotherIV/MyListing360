@@ -56,4 +56,13 @@ export default {
       `${remoteURL}/photoAlbums/${tourId}?_embed=VRimages`
     ).then((result) => result.json());
   },
+  createNewUser(newUser) {
+    return fetch(`${remoteURL}/users/`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newUser),
+    }).then((data) => data.json());
+  },
 };

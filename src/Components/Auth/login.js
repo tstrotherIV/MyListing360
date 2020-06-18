@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import DataManager from "../../modules/DataManager";
 import "./login.css";
 
@@ -38,10 +39,6 @@ const Login = (props) => {
         }
       });
     }
-    // else: get credentials from state
-    // create fetch to get users from the users database and return the objects
-    // compare credentials to returned objects
-    // if user with matching info exists take users ID and store it in session storage
   };
 
   return (
@@ -50,9 +47,9 @@ const Login = (props) => {
         <section className="loginAccessSect ">
           <section className="loginCreateAccSect ">
             <div className="logincreateAccBtn">Don't have an account?</div>
-            <div className="logincreateAccHyperlink space4px">
-              Create Account
-            </div>
+            <Link to={"/createAcct"}>
+              <button className="viewTourBtn gap">Create Account</button>
+            </Link>
           </section>
         </section>
         <div className="loginformFields">

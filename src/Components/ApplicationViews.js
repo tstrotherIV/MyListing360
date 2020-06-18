@@ -8,6 +8,7 @@ import CreatephotoAlbum from "./tourCreator/createTour/tourCreator";
 import TourCard from "./tourCard/tourCard";
 import TourViewer from "./tourViewer/tourViewer";
 import TourEdit from "./tourEdit/tourEdit";
+import CreateAcct from "./Auth/createAcct";
 
 const ApplicationViews = (props) => {
   const hasUser = props.hasUser;
@@ -22,6 +23,13 @@ const ApplicationViews = (props) => {
         path="/"
         render={(props) => {
           return <HomePage setUser={setUser} {...props} />;
+        }}
+      />
+      <Route
+        exact
+        path="/createAcct"
+        render={(props) => {
+          return <CreateAcct setUser={setUser} {...props} />;
         }}
       />
       <Route

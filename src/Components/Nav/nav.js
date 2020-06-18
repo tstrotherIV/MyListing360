@@ -36,12 +36,12 @@ const NavBar = (props) => {
                 MyTours{" "}
               </span>
             </li>
-            <li>
+            {/* <li>
               <NavLink className="nav-link" to="/account">
                 {" "}
                 Account{" "}
               </NavLink>
-            </li>
+            </li> */}
             <li>
               <span className="nav-link" onClick={handleLogout}>
                 {" "}
