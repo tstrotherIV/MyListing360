@@ -8,6 +8,10 @@ const NavBar = (props) => {
     props.history.push("/");
   };
 
+  const toursWithUserId = () => {
+    props.history.push(`/tours/${props.userId}`);
+  };
+
   return (
     <>
       <section className="userIdName">Hey, Tom Strother</section>
@@ -25,10 +29,10 @@ const NavBar = (props) => {
             </NavLink>
 
             <li>
-              <NavLink className="nav-link" to="/tours">
+              <span className="nav-link" onClick={toursWithUserId}>
                 {" "}
-                Tours{" "}
-              </NavLink>
+                MyTours{" "}
+              </span>
             </li>
             <li>
               <NavLink className="nav-link" to="/account">

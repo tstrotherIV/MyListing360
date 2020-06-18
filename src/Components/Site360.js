@@ -23,7 +23,7 @@ const Site360Home = (props) => {
 
   return (
     <>
-      <NavBar hasUser={hasUser} clearUser={clearUser} />
+      <NavBar hasUser={hasUser} clearUser={clearUser} userId={loggedUserId} />
       <ApplicationViews
         hasUser={hasUser}
         setUser={setUser}
