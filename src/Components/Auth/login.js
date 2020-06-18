@@ -30,6 +30,7 @@ const Login = (props) => {
           user[0].password === credentials.password
         ) {
           sessionStorage.setItem("loggedUser", user[0].id);
+          sessionStorage.setItem("loggedUserName", user[0].firstName);
           let loggedUser = sessionStorage.getItem(`loggedUser`);
           props.setUser(loggedUser);
 

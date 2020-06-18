@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+// import DataManager from "../../modules/DataManager";
 import "./tourCard.css";
 
 const TourCard = (props) => {
@@ -19,7 +20,14 @@ const TourCard = (props) => {
             <button className="viewTourBtn gap">View Tour</button>
           </Link>
           <button className="editTourBtn gap">Edit Tour</button>
-          <button className="deleteTourBtn gap">Delete Tour</button>
+          <button
+            className="deleteTourBtn gap"
+            onClick={() => {
+              props.deleteTour(props.tour.id);
+            }}
+          >
+            Delete Tour
+          </button>
         </div>
       </section>
     </div>
