@@ -41,14 +41,14 @@
       "photoAlbumId": 1,
       "name": "Living Room",
       "description": "300 sqft",
-      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592235044/360imgFolder/living_room_mmyzrt.jpg"
+      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592420440/360imgFolder/img2_trupbj.jpg"
     },
     {
       "userId": 1,
       "photoAlbumId": 1,
       "name": "downstairs room",
       "description": "its big",
-      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592235044/360imgFolder/living_room_mmyzrt.jpg",
+      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592416156/360imgFolder/beach_gba7dm.jpg",
       "id": 2
     },
     {
@@ -58,14 +58,6 @@
       "description": "",
       "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592317375/360imgFolder/euxhndw9l3immbncddom.jpg",
       "id": 3
-    },
-    {
-      "userId": 1,
-      "photoAlbumId": 1,
-      "name": "",
-      "description": "",
-      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592416156/360imgFolder/beach_gba7dm.jpg",
-      "id": 4
     }
   ]
 }
