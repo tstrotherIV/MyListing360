@@ -15,6 +15,7 @@ const TourViewer = (props) => {
   const getTourImages = () => {
     return DataManager.getTourImages(props.tourId).then((imagesfromDb) => {
       setImages(imagesfromDb.VRimages);
+      setnewImage(imagesfromDb.VRimages[0].url);
     });
   };
 

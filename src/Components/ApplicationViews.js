@@ -13,7 +13,7 @@ const ApplicationViews = (props) => {
   const setUser = props.setUser;
 
   const userId = parseInt(props.userId);
-  console.log("userId", userId);
+  // console.log("userId", userId);
 
   return (
     <React.Fragment>
