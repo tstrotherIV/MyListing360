@@ -2,12 +2,10 @@ import React, { useState } from "react";
 import "./Site360.css";
 import NavBar from "./Nav/nav";
 import ApplicationViews from "./ApplicationViews";
-// import { BrowserRouter } from "react-router-dom";
 
 const Site360Home = (props) => {
   const isAuthenticated = () => sessionStorage.getItem("loggedUser") !== null;
   const loggedUserId = sessionStorage.getItem("loggedUser");
-  console.log(loggedUserId);
 
   const [hasUser, setHasUser] = useState(isAuthenticated());
 

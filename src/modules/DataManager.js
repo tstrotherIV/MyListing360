@@ -9,8 +9,8 @@ export default {
   getAll(resource) {
     return fetch(`${remoteURL}/${resource}`).then((result) => result.json());
   },
-  delete(id) {
-    return fetch(`${remoteURL}/products/${id}`, {
+  delete(resource, id) {
+    return fetch(`${remoteURL}/${resource}/${id}`, {
       method: "DELETE",
     }).then((result) => result.json());
   },
@@ -33,7 +33,7 @@ export default {
     }).then((data) => data.json());
   },
   postNewImage(newMedia) {
-    return fetch(`${remoteURL}/360images/`, {
+    return fetch(`${remoteURL}/VRimages/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

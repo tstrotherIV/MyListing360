@@ -14,7 +14,9 @@ const NavBar = (props) => {
 
   return (
     <>
-      <section className="userIdName">Hey, Tom Strother</section>
+      <section className="userIdName">
+        Hey {sessionStorage.getItem("loggedUserName")}
+      </section>
       <nav className="contentRight">
         {props.hasUser ? (
           <ul className="container">

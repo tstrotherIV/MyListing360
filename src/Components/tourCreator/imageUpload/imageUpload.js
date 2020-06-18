@@ -8,7 +8,7 @@ function ImageUpload(props) {
   const [loading, setLoading] = useState(false);
   const [photoAlbum, setphotoAlbum] = useState({
     userId: props.userId,
-    albumId: props.photoAlbumId,
+    photoAlbumId: props.photoAlbumId,
     name: "",
     description: "",
     url: "",
@@ -22,14 +22,18 @@ function ImageUpload(props) {
 
   const addNewImage = (evt) => {
     evt.preventDefault();
-    if (image === "") {
-      window.alert("Please select a 360 Image to Upload");
+    if (
+      photoAlbum.name === "" ||
+      photoAlbum.description === ""
+      // || photoAlbum.url === ""
+    ) {
+      window.alert("Please complete the form");
     } else {
       setLoading(true);
       const newAlbum = { ...photoAlbum };
       newAlbum.url = image;
       DataManager.postNewImage(newAlbum).then(() =>
-        props.history.push("/tours")
+        props.history.push(`/tours/${props.userId}`)
       );
     }
   };

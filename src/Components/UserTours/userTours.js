@@ -13,6 +13,16 @@ const UserTours = (props) => {
   //   setTourName(stateToChange);
   // };
 
+  const deleteTour = (id) => {
+    DataManager.delete("photoAlbums", id).then(() =>
+      DataManager.getUsersTours("photoAlbums", props.userId).then(
+        (toursFromAPI) => {
+          setTours(toursFromAPI);
+        }
+      )
+    );
+  };
+
   const getTours = () => {
     return DataManager.getUsersTours("photoAlbums", props.userId).then(
       (toursFromAPI) => {
@@ -29,7 +39,10 @@ const UserTours = (props) => {
     <>
       <section className="pgContainer">
         <div className="tourPgHeader centerItem">
-          <h5>Virtual Tour Dashboard</h5>
+          <h5>
+            {sessionStorage.getItem("loggedUserName")}, here is your Virtual
+            Tour Dashboard
+          </h5>
         </div>
         <div className="centerItem">
           <NavLink to="/createphotoAlbum">
@@ -62,7 +75,12 @@ const UserTours = (props) => {
           <section className="tourDisplaySect">
             <div className="container-cards">
               {tours.map((tour) => (
-                <TourCard key={tour.id} tour={tour} {...props} />
+                <TourCard
+                  key={tour.id}
+                  tour={tour}
+                  deleteTour={deleteTour}
+                  {...props}
+                />
               ))}
             </div>
           </section>
