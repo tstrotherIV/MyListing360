@@ -23,8 +23,8 @@ export default {
       body: JSON.stringify(newMedia),
     }).then((data) => data.json());
   },
-  update(editedMedia) {
-    return fetch(`${remoteURL}/products/${editedMedia.id}`, {
+  update(resource, editedMedia) {
+    return fetch(`${remoteURL}/${resource}/${editedMedia.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
