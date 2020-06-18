@@ -18,9 +18,9 @@
   "photoAlbums": [
     {
       "id": 1,
-      "userId": 1,
-      "title": "1234 Turn Down Ln",
-      "description": "large house on 4 acres"
+      "title": "1234 Turn Down Street",
+      "description": "Small",
+      "userId": 1
     },
     {
       "title": "First Tour",

@@ -7,6 +7,7 @@ import ImageUpload from "./tourCreator/imageUpload/imageUpload";
 import CreatephotoAlbum from "./tourCreator/createTour/tourCreator";
 import TourCard from "./tourCard/tourCard";
 import TourViewer from "./tourViewer/tourViewer";
+import TourEdit from "./tourEdit/tourEdit";
 
 const ApplicationViews = (props) => {
   const hasUser = props.hasUser;
@@ -88,6 +89,20 @@ const ApplicationViews = (props) => {
         render={(props) => {
           return (
             <TourViewer
+              setUser={setUser}
+              userId={userId}
+              tourId={parseInt(props.match.params.tourId)}
+              {...props}
+            />
+          );
+        }}
+      />
+      <Route
+        exact
+        path="/tourEdit/:tourId(\d+)/"
+        render={(props) => {
+          return (
+            <TourEdit
               setUser={setUser}
               userId={userId}
               tourId={parseInt(props.match.params.tourId)}
