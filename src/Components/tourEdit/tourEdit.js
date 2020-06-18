@@ -4,6 +4,7 @@ import "./tourEdit.css";
 
 const EditTour = (props) => {
   const [isLoading, setIsLoading] = useState(false);
+  const [images, setImages] = useState([]);
   const [photoAlbum, setphotoAlbum] = useState({
     title: "",
     description: "",
@@ -14,6 +15,12 @@ const EditTour = (props) => {
     const stateToChange = { ...photoAlbum };
     stateToChange[evt.target.id] = evt.target.value;
     setphotoAlbum(stateToChange);
+  };
+
+  const getTourImages = () => {
+    return DataManager.getTourImages(props.tourId).then((imagesfromDb) => {
+      setImages(imagesfromDb.VRimages);
+    });
   };
 
   const updateTour = (evt) => {
@@ -32,14 +39,23 @@ const EditTour = (props) => {
     );
   };
 
+  const deleteImage = (id) => {
+    DataManager.delete("VRimages", id).then(() =>
+      DataManager.getTourImages(props.tourId).then((imagesfromDb) => {
+        setImages(imagesfromDb.VRimages);
+      })
+    );
+  };
+
   useEffect(() => {
     DataManager.get(props.match.params.tourId, "photoAlbums", "").then(
       (photoAlbum) => {
         setphotoAlbum(photoAlbum);
         setIsLoading(false);
+        getTourImages();
       }
     );
-  }, [props.match.params.tourId]);
+  }, []);
 
   return (
     <>
@@ -76,6 +92,25 @@ const EditTour = (props) => {
               Submit
             </button>
           </div>
+          <br></br>
+          <section>
+            {images.map((image) => (
+              <section key={image.id} id={image.id} value={image.name}>
+                {image.name}{" "}
+                <button
+                  className="deleteTourBtn gap"
+                  onClick={() => {
+                    deleteImage(image.id);
+                  }}
+                >
+                  Remove Image
+                </button>
+                <br></br>
+                <img src={image.url} alt="" style={{ width: "300px" }} />
+                <br></br>
+              </section>
+            ))}
+          </section>
         </fieldset>
       </form>
     </>

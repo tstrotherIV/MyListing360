@@ -23,68 +23,51 @@
       "userId": 1
     },
     {
-      "title": "First Tour",
-      "description": "asdf",
-      "userId": 2,
-      "id": 2
-    },
-    {
-      "title": "First Tour",
-      "description": "asdf",
-      "userId": 2,
-      "id": 3
-    },
-    {
-      "title": "Live Nation Nashville",
-      "description": "asdfasdf",
+      "title": "test",
+      "description": "Add images",
       "userId": 1,
       "id": 4
-    },
-    {
-      "title": "Live Nation Nashville",
-      "description": "asdf",
-      "userId": 1,
-      "id": 5
     }
   ],
   "VRimages": [
     {
-      "id": 1,
+      "userId": 1,
       "photoAlbumId": 1,
-      "name": "Living Room",
-      "description": "300 sqft",
-      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592420440/360imgFolder/img2_trupbj.jpg"
+      "name": "My Favorite",
+      "description": "sub",
+      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592317375/360imgFolder/euxhndw9l3immbncddom.jpg",
+      "id": 1
     },
     {
       "userId": 1,
       "photoAlbumId": 1,
-      "name": "downstairs room",
-      "description": "its big",
+      "name": "My Favorite",
+      "description": "sub",
       "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592416156/360imgFolder/beach_gba7dm.jpg",
       "id": 2
     },
     {
       "userId": 1,
       "photoAlbumId": 1,
-      "name": "",
-      "description": "",
-      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592317375/360imgFolder/euxhndw9l3immbncddom.jpg",
+      "name": "My Favorite",
+      "description": "sub",
+      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592420440/360imgFolder/img2_trupbj.jpg",
       "id": 3
     },
     {
       "userId": 1,
       "photoAlbumId": 4,
-      "name": "Thomas Rhett Live Stream",
-      "description": "asdfasdf",
-      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592498055/360imgFolder/aihbqcjkcnlazu288vki.jpg",
+      "name": "My Favorite",
+      "description": "sub",
+      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592420440/360imgFolder/img2_trupbj.jpg",
       "id": 4
     },
     {
       "userId": 1,
-      "photoAlbumId": 5,
-      "name": "fffff",
-      "description": "ffff",
-      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592498125/360imgFolder/ali9bf2hjktxfm9h29it.jpg",
+      "photoAlbumId": 4,
+      "name": "My Favorite",
+      "description": "sub",
+      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592502429/360imgFolder/rlizj75qffcxg2tpw26x.jpg",
       "id": 5
     }
   ]
