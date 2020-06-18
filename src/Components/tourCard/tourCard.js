@@ -19,10 +19,15 @@ const TourCard = (props) => {
           <Link to={`/tourViewer/${props.tour.id}`}>
             <button className="viewTourBtn gap">View Tour</button>
           </Link>
-          <button className="editTourBtn gap">Edit Tour</button>
+          <Link to={`/tourEdit/${props.tour.id}`}>
+            <button className="editTourBtn gap">Edit Tour</button>
+          </Link>
           <button
             className="deleteTourBtn gap"
             onClick={() => {
+              alert(
+                "Are you sure you want to delete this tour? I cannot be undone."
+              );
               props.deleteTour(props.tour.id);
             }}
           >
