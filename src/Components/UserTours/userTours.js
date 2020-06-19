@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import TourCard from "../tourCard/tourCard";
 import DataManager from "../../modules/DataManager";
 import "./userTours.css";
@@ -24,7 +24,7 @@ const UserTours = (props) => {
       editedTour.trash = true;
       // console.log(editedTour);
       DataManager.update("photoAlbums", editedTour).then((newTours) => {
-        DataManager.getUsersTours("photoAlbums", props.userId).then(
+        DataManager.getUsersTours("photoAlbums", props.userId, false).then(
           (toursFromAPI) => {
             setTours(toursFromAPI);
           }
@@ -44,11 +44,15 @@ const UserTours = (props) => {
   // };
 
   const getTours = () => {
-    return DataManager.getUsersTours("photoAlbums", props.userId).then(
+    return DataManager.getUsersTours("photoAlbums", props.userId, false).then(
       (toursFromAPI) => {
         setTours(toursFromAPI);
       }
     );
+  };
+
+  const userTrash = () => {
+    props.history.push(`/tours/${props.userId}/trash`);
   };
 
   useEffect(() => {
@@ -76,9 +80,10 @@ const UserTours = (props) => {
         </div>
         <section className="tourFilterAndTrash">
           <div className="tourFilterBoxes centerItem">
-            <button className="trashCanBtn" type="button">
-              Trash Can
-            </button>
+            <span className="nav-link" onClick={userTrash}>
+              {" "}
+              Trash (Deleted Tours){" "}
+            </span>
           </div>
           <h5 className="createdVirtualToursHead">Created Virtual Tours</h5>
           <hr className="blueDevideLine"></hr>
