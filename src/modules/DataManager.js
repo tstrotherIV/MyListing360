@@ -32,6 +32,15 @@ export default {
       body: JSON.stringify(editedMedia),
     }).then((data) => data.json());
   },
+  updateTourTrash(resource, id, editedMedia) {
+    return fetch(`${remoteURL}/${resource}/${id}${editedMedia}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(editedMedia),
+    }).then((data) => data.json());
+  },
   postNewImage(newMedia) {
     return fetch(`${remoteURL}/VRimages/`, {
       method: "POST",
@@ -47,9 +56,9 @@ export default {
     );
   },
   getUsersTours(resource, userId) {
-    return fetch(`${remoteURL}/${resource}?userId=${userId}`).then((result) =>
-      result.json()
-    );
+    return fetch(
+      `${remoteURL}/${resource}?userId=${userId}&trash=false`
+    ).then((result) => result.json());
   },
   getTourImages(tourId) {
     return fetch(
@@ -63,6 +72,15 @@ export default {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(newUser),
+    }).then((data) => data.json());
+  },
+  moveToTrash(tour) {
+    return fetch(`${remoteURL}/trash/`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(tour),
     }).then((data) => data.json());
   },
 };

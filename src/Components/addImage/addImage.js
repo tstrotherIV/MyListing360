@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import DataManager from "../../modules/DataManager";
 import "aframe";
+import "./addImage.css";
 
 // import "./imageUpload.css";
 
@@ -59,8 +60,8 @@ function EditAddImage(props) {
   };
 
   return (
-    <div>
-      <div className="App">
+    <div className="form">
+      <div className="imageSelect">
         <h1>Upload Image</h1>
         <input
           type="file"
@@ -87,7 +88,7 @@ function EditAddImage(props) {
         />
       </div>
       <br></br>
-      <section className="">
+      <section className="saveBtnGrid">
         <div className="imageSaveBtn">
           <button
             type="button"
@@ -95,11 +96,11 @@ function EditAddImage(props) {
             disabled={""}
             onClick={addNewImage}
           >
-            Add Image to my tour!
+            Save Image
           </button>
         </div>
 
-        <section>
+        <section className="returnedImg">
           <a-scene class="aframebox" embedded>
             <a-sky src={image}></a-sky>
           </a-scene>
