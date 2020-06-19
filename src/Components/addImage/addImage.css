@@ -1,0 +1,25 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  border: black 1px solid;
+  margin: 4px;
+  padding: 8px;
+}
+
+.imageSelect {
+  margin: 8px;
+}
+
+.saveBtnGrid {
+  display: flex;
+  flex-direction: column;
+}
+
+.imageSaveBtn {
+  justify-content: flex-start;
+}
+
+.returnedImg {
+  margin: 4px;
+  padding: 4px;
+}

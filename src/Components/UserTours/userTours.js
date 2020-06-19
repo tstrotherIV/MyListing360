@@ -6,6 +6,8 @@ import "./userTours.css";
 
 const UserTours = (props) => {
   const [tours, setTours] = useState([]);
+  const [album, setAlbum] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   // const handleFieldChange = (evt) => {
   //   const stateToChange = { ...tourName };
@@ -13,15 +15,33 @@ const UserTours = (props) => {
   //   setTourName(stateToChange);
   // };
 
-  const deleteTour = (id) => {
-    DataManager.delete("photoAlbums", id).then(() =>
-      DataManager.getUsersTours("photoAlbums", props.userId).then(
-        (toursFromAPI) => {
-          setTours(toursFromAPI);
-        }
-      )
-    );
+  const updateTour = (id) => {
+    setLoading(true);
+
+    DataManager.get(id, "photoAlbums", "").then((album) => {
+      setAlbum(album);
+      const editedTour = { ...album };
+      editedTour.trash = true;
+      // console.log(editedTour);
+      DataManager.update("photoAlbums", editedTour).then((newTours) => {
+        DataManager.getUsersTours("photoAlbums", props.userId).then(
+          (toursFromAPI) => {
+            setTours(toursFromAPI);
+          }
+        );
+      });
+    });
   };
+
+  // const deleteTour = (id) => {
+  //   DataManager.delete("photoAlbums", id).then(() =>
+  //     DataManager.getUsersTours("photoAlbums", props.userId).then(
+  //       (toursFromAPI) => {
+  //         setTours(toursFromAPI);
+  //       }
+  //     )
+  //   );
+  // };
 
   const getTours = () => {
     return DataManager.getUsersTours("photoAlbums", props.userId).then(
@@ -56,15 +76,6 @@ const UserTours = (props) => {
         </div>
         <section className="tourFilterAndTrash">
           <div className="tourFilterBoxes centerItem">
-            <input
-              // onChange=""
-              type="filterName"
-              className="filterByNameBox"
-              id="filterByName"
-              placeholder="Search Virtual Tours..."
-              required=""
-              autoFocus=""
-            />
             <button className="trashCanBtn" type="button">
               Trash Can
             </button>
@@ -78,7 +89,7 @@ const UserTours = (props) => {
                 <TourCard
                   key={tour.id}
                   tour={tour}
-                  deleteTour={deleteTour}
+                  deleteTour={updateTour}
                   {...props}
                 />
               ))}

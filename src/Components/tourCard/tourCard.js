@@ -25,9 +25,6 @@ const TourCard = (props) => {
           <button
             className="deleteTourBtn gap"
             onClick={() => {
-              alert(
-                "Are you sure you want to delete this tour? I cannot be undone."
-              );
               props.deleteTour(props.tour.id);
             }}
           >
