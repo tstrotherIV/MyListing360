@@ -3,22 +3,29 @@
     {
       "id": 1,
       "firstName": "James",
-      "lastname": "Decker",
+      "lastName": "Decker",
       "username": "Jake",
       "password": 1234
     },
     {
       "id": 2,
       "firstName": "Tammy",
-      "lastname": "Wise",
+      "lastName": "Wise",
       "username": "Tammy",
       "password": 1234
+    },
+    {
+      "firstName": "Timmy",
+      "lastName": "Stringer",
+      "username": "Timmy",
+      "password": "1234",
+      "id": 3
     }
   ],
   "photoAlbums": [
     {
       "id": 1,
-      "title": "234 Daven St",
+      "title": "234 Daven Drive",
       "description": "Don't wait to see this ONE-OF-A-KIND, CUSTOM BUILT home in lovely, highly-desirable CLERMONT LAKEVIEW HILLS subdivision, ON A LARGE LOT. BEAUTIFUL VIEWS OF LAKE MINNEHAHA from virtually every room in this home! OPEN FLOOR PLAN with a Great Room that features sweeping panoramic windows facing the lake, warm & welcoming indirect lighting, updated ceiling fans and Travertine floors. SPLIT FLOOR PLAN has bedrooms at opposite ends of the home, for privacy, and each has sliding glass doors through which you can access a balcony overlooking the lake. ROOF 2016. The kitchen features STAINLESS STEEL APPLIANCES (2018) and custom cabinetry. New ceiling fans and energy-efficient LED lighting; updated, easy maintenance landscaping. OVERSIZED GARAGE affords plenty of room for a work area PLUS 2 vehicles. Residents of this HOA enjoy DIRECT LAKE ACCESS via a community dock on Minnehaha, only a few hundred yards from your front door. Close to Clermont shopping, services and the West Orange bike trail. Make an appointment today to see this unique designer home.",
       "userId": 1,
       "trash": false
@@ -57,6 +64,13 @@
       "userId": 1,
       "trash": false,
       "id": 6
+    },
+    {
+      "title": "First Tour",
+      "description": "asdf",
+      "userId": 1,
+      "trash": false,
+      "id": 7
     }
   ],
   "VRimages": [
@@ -75,14 +89,6 @@
       "description": "Nice views of the property",
       "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592511033/360imgFolder/front_door_ra5bmi.jpg",
       "id": 2
-    },
-    {
-      "userId": 1,
-      "photoAlbumId": 1,
-      "name": "Master Bedroom",
-      "description": "Large Master Bedroom with Amazing views",
-      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592511033/360imgFolder/master_bedroom_uddfqj.jpg",
-      "id": 3
     },
     {
       "userId": 1,

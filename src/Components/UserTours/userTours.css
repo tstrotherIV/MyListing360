@@ -16,11 +16,13 @@
   justify-content: center;
 }
 
-.tourFilterBoxes {
+.tourFilterAndTrash {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
   margin-top: 30px;
+}
+.tourFilterBoxes {
+  justify-content: center;
 }
 
 .createTour {

@@ -79,11 +79,11 @@ const UserTours = (props) => {
           </NavLink>
         </div>
         <section className="tourFilterAndTrash">
-          <div className="tourFilterBoxes centerItem">
-            <span className="nav-link" onClick={userTrash}>
+          <div className="tourFilterBoxes">
+            <button className="trash" onClick={userTrash}>
               {" "}
-              Trash (Deleted Tours){" "}
-            </span>
+              Deleted Tours{" "}
+            </button>
           </div>
           <h5 className="createdVirtualToursHead">Created Virtual Tours</h5>
           <hr className="blueDevideLine"></hr>
