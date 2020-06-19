@@ -9,6 +9,7 @@ import TourCard from "./tourCard/tourCard";
 import TourViewer from "./tourViewer/tourViewer";
 import TourEdit from "./tourEdit/tourEdit";
 import CreateAcct from "./Auth/createAcct";
+import Trash from "./trash/trash";
 
 const ApplicationViews = (props) => {
   const hasUser = props.hasUser;
@@ -44,6 +45,13 @@ const ApplicationViews = (props) => {
         path="/tours/:userId(\d+)/"
         render={(props) => {
           return <UserTours setUser={setUser} userId={userId} {...props} />;
+        }}
+      />
+      <Route
+        exact
+        path="/tours/:userId(\d+)/trash"
+        render={(props) => {
+          return <Trash setUser={setUser} userId={userId} {...props} />;
         }}
       />
       <Route

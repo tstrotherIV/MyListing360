@@ -55,9 +55,9 @@ export default {
       result.json()
     );
   },
-  getUsersTours(resource, userId) {
+  getUsersTours(resource, userId, boolean) {
     return fetch(
-      `${remoteURL}/${resource}?userId=${userId}&trash=false`
+      `${remoteURL}/${resource}?userId=${userId}&trash=${boolean}`
     ).then((result) => result.json());
   },
   getTourImages(tourId) {
