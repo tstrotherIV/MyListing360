@@ -1,6 +1,5 @@
 .tourImages {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
 }
 
@@ -12,8 +11,11 @@
 
 .sepImage {
   flex-shrink: 3;
-  flex-basis: 20%;
+  flex-basis: 10%;
   padding: 8px;
+  margin: 15px;
+  box-shadow: 5px 10px 7px #888888;
+  background: #c2cad0;
 }
 
 .descriptionBox {
@@ -38,4 +40,9 @@
   border: black 1px solid;
   margin: 4px;
   padding: 8px;
+}
+
+.deleteTourBtn:hover {
+  color: white;
+  cursor: pointer;
 }
