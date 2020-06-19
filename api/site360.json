@@ -121,6 +121,38 @@
       "description": "Its big",
       "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592512656/360imgFolder/emojmi59xo7antyzf0kv.jpg",
       "id": 11
+    },
+    {
+      "userId": 1,
+      "photoAlbumId": 1,
+      "name": "Guest Bathroom",
+      "description": "asdf",
+      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592577042/360imgFolder/c4ypaw0qt8qfxdprc9ty.jpg",
+      "id": 12
+    },
+    {
+      "userId": 1,
+      "photoAlbumId": 1,
+      "name": "upstairs living room",
+      "description": "asdf",
+      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592577494/360imgFolder/uhwb2iedlu9wpjxmqbth.jpg",
+      "id": 13
+    },
+    {
+      "userId": 1,
+      "photoAlbumId": 1,
+      "name": "Front Door",
+      "description": "CHCHC",
+      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592577775/360imgFolder/ev13gywmwzmombvqvqq7.jpg",
+      "id": 14
+    },
+    {
+      "userId": 1,
+      "photoAlbumId": 4,
+      "name": "Front Door",
+      "description": "asdlkfj",
+      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592577819/360imgFolder/xgcptzrgebkgkmspcdug.jpg",
+      "id": 15
     }
   ]
 }

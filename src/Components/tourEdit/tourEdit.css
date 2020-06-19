@@ -1,0 +1,41 @@
+.tourImages {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.tourImageSect {
+  border: black 1px solid;
+  margin: 4px;
+  padding: 8px;
+}
+
+.sepImage {
+  flex-shrink: 3;
+  flex-basis: 20%;
+  padding: 8px;
+}
+
+.descriptionBox {
+  height: 200px;
+  word-wrap: break-word;
+}
+
+.submitBtn {
+  margin: 4px;
+}
+
+.editAddNewImg {
+  border: black 1px solid;
+  margin: 4px;
+  padding: 8px;
+}
+
+.tourContent {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  border: black 1px solid;
+  margin: 4px;
+  padding: 8px;
+}

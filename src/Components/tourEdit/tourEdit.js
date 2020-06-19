@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import DataManager from "../../modules/DataManager";
+import EditAddImage from "../addImage/addImage";
 import "./tourEdit.css";
 
 const EditTour = (props) => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [NewHTML, setNewHTML] = useState(false);
   const [images, setImages] = useState([]);
   const [photoAlbum, setphotoAlbum] = useState({
     title: "",
@@ -25,7 +27,7 @@ const EditTour = (props) => {
 
   const updateTour = (evt) => {
     evt.preventDefault();
-    setIsLoading(true);
+    setLoading(true);
 
     const editedTour = {
       id: props.match.params.tourId,
@@ -47,11 +49,17 @@ const EditTour = (props) => {
     );
   };
 
+  const addNewImage = () => {
+    setNewHTML(
+      <EditAddImage photoAlbum={photoAlbum} setImages={setImages} {...props} />
+    );
+  };
+
   useEffect(() => {
     DataManager.get(props.match.params.tourId, "photoAlbums", "").then(
       (photoAlbum) => {
         setphotoAlbum(photoAlbum);
-        setIsLoading(false);
+        setLoading(false);
         getTourImages();
       }
     );
@@ -61,7 +69,9 @@ const EditTour = (props) => {
     <>
       <form>
         <fieldset>
-          <div className="formgrid">
+          <div className="tourContent">
+            <h2 className="alignLeft">Edit your Tour Details</h2>
+            <label htmlFor="name">Tour Name</label>
             <input
               type="text"
               required
@@ -70,46 +80,62 @@ const EditTour = (props) => {
               id="title"
               value={photoAlbum.title}
             />
-            <label htmlFor="name">Tour Name</label>
 
+            <label htmlFor="Description">Description</label>
             <input
               type="text"
               required
-              className="form-control"
+              className="descriptionBox"
               onChange={handleFieldChange}
               id="description"
               value={photoAlbum.description}
             />
-            <label htmlFor="Description">Description</label>
-          </div>
-          <div className="alignRight">
-            <button
-              type="button"
-              // disabled={isLoading}
-              onClick={updateTour}
-              className="btn btn-primary"
-            >
-              Submit
-            </button>
+            <div className="submitBtn">
+              <button
+                type="button"
+                // disabled={isLoading}
+                onClick={updateTour}
+                className="btn btn-primary"
+              >
+                Save Changes
+              </button>
+            </div>
           </div>
           <br></br>
-          <section>
-            {images.map((image) => (
-              <section key={image.id} id={image.id} value={image.name}>
-                {image.name}{" "}
-                <button
-                  className="deleteTourBtn gap"
-                  onClick={() => {
-                    deleteImage(image.id);
-                  }}
+          <section className="tourImageSect">
+            <h2>Remove Images from your Tour</h2>
+            <section className="tourImages">
+              {images.map((image) => (
+                <section
+                  className="sepImage"
+                  key={image.id}
+                  id={image.id}
+                  value={image.name}
                 >
-                  Remove Image
-                </button>
-                <br></br>
-                <img src={image.url} alt="" style={{ width: "300px" }} />
-                <br></br>
-              </section>
-            ))}
+                  {image.name}{" "}
+                  <button
+                    className="deleteTourBtn gap"
+                    onClick={() => {
+                      deleteImage(image.id);
+                    }}
+                  >
+                    Remove Image
+                  </button>
+                  <br></br>
+                  <img src={image.url} alt="" style={{ width: "300px" }} />
+                  <br></br>
+                </section>
+              ))}
+            </section>
+          </section>
+          <section>
+            <div className="editAddNewImg">
+              <h2>Add Images to your Tour</h2>
+              <button type="button" id="editAddNewImg" onClick={addNewImage}>
+                Add Image to my tour!
+              </button>
+              <section>{NewHTML}</section>
+            </div>
           </section>
         </fieldset>
       </form>

@@ -39,7 +39,7 @@ const TourViewer = (props) => {
             value={image.url}
             onClick={handleFieldChange}
           >
-            Image
+            {image.name}
           </button>
         ))}
       </section>
