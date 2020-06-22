@@ -1,0 +1,25 @@
+.aframebox1 {
+  height: 720px;
+  width: 1200px;
+  box-shadow: 5px 10px 7px #888888;
+}
+
+.tourViewerSect {
+  display: flex;
+  flex-direction: column;
+}
+
+.move {
+  align-self: center;
+}
+
+.tourImageLinks1 {
+  margin: 8px;
+  display: flex;
+}
+
+.imageBtns {
+  justify-content: space-between;
+  margin: 4px;
+  box-shadow: 5px 5px 7px #888888;
+}

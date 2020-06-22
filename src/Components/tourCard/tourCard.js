@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 // import DataManager from "../../modules/DataManager";
+import { FacebookShareButton, FacebookIcon } from "react-share";
 import "./tourCard.css";
 
 const TourCard = (props) => {
@@ -30,6 +31,15 @@ const TourCard = (props) => {
           >
             Delete Tour
           </button>
+          <div>
+            <h4>Share Tour</h4>
+            <FacebookShareButton
+              url={`http://localhost:3000/tourViewer/${props.tour.id}`}
+              className="Demo__some-network__share-button"
+            >
+              <FacebookIcon size={32} round />
+            </FacebookShareButton>
+          </div>
         </div>
       </section>
     </div>

@@ -60,7 +60,8 @@ function ImageUpload(props) {
   return (
     <div>
       <div className="App">
-        <h1>Upload Image</h1>
+        <h1>Add Image to Tour</h1>
+        <h4>Step 1...</h4>
         <input
           type="file"
           name="file"
@@ -69,14 +70,25 @@ function ImageUpload(props) {
         />
         {loading && <h3>Please wait...</h3>}
       </div>
+      <section className="imagePreview">
+        <h2 className="imgPreviewHeader">
+          Image Preview (Click and drap on image to view in VR)
+        </h2>
+        <div className="container">
+          <a-scene class="aframebox" embedded>
+            <a-sky src={image}></a-sky>
+          </a-scene>
+        </div>
+      </section>
       <div className="addImageFormFields">
+        <h4>Step 2...</h4>
+        <h2>Add Image Details (Required)</h2>
         <input
           onChange={handleFieldChange}
           type="text"
           id="name"
           placeholder="Name your Image (eg: Living Room)"
         />
-
         <input
           onChange={handleFieldChange}
           type="text"
@@ -86,7 +98,8 @@ function ImageUpload(props) {
         />
       </div>
       <br></br>
-      <section className="">
+      <section className="saveImgSect">
+        <h4>Step 3...</h4>
         <div className="imageSaveBtn">
           <button
             type="button"
@@ -97,12 +110,6 @@ function ImageUpload(props) {
             Add Image to my tour!
           </button>
         </div>
-
-        <section>
-          <a-scene class="aframebox" embedded>
-            <a-sky src={image}></a-sky>
-          </a-scene>
-        </section>
       </section>
     </div>
   );

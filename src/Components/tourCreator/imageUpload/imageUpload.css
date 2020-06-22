@@ -1,10 +1,14 @@
 .aframebox {
-  height: 700px;
-  width: 100%;
+  margin: 10px;
+  height: 506px;
+  width: 900px;
+  border: solid black 1px;
+  box-shadow: 5px 10px 7px #888888;
 }
 
 .App {
-  text-align: center;
+  text-align: left;
+  margin: 10px;
 }
 
 .App-logo {
@@ -49,7 +53,6 @@
 .imageSaveBtn {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
 }
 
 .createTourFormFields {
@@ -71,6 +74,40 @@
   text-align: center;
 }
 
-.saveTourBtn {
-  justify-items: right;
+.imageSaveBtn {
+  padding: 4px;
+}
+
+.addImageFormFields {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  border: solid black 1px;
+  padding: 4px;
+  box-shadow: 5px 10px 7px #888888;
+  width: 900px;
+}
+
+.imgPreviewHeader {
+  margin: 10px;
+  padding: 4px;
+}
+
+.saveImgSect {
+  margin: 10px;
+  padding: 4px;
+  border: solid black 1px;
+  box-shadow: 5px 10px 7px #888888;
+  width: 900px;
+}
+
+.container {
+  position: relative;
+}
+
+.topleft {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
 }
