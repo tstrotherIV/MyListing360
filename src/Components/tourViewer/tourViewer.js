@@ -24,17 +24,18 @@ const TourViewer = (props) => {
   }, []);
 
   return (
-    <div>
-      <h2 className="tourNameHeader">Tour Name</h2>
-      <section className="vrImageViewer">
-        <a-scene class="aframebox" embedded>
+    <div className="tourViewerSect">
+      <h2 className="tourNameHeader move">Tour Name</h2>
+      <section className="vrImageViewer move">
+        <a-scene class="aframebox1" embedded>
           <a-sky src={newImage}></a-sky>
         </a-scene>
       </section>
-      <section className="tourImageLinks">
+      <section className="tourImageLinks1 move">
         {images.map((image) => (
           <button
             key={image.id}
+            className="imageBtns"
             id={image.id}
             value={image.url}
             onClick={handleFieldChange}

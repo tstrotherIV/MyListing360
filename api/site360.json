@@ -20,6 +20,13 @@
       "username": "Timmy",
       "password": "1234",
       "id": 3
+    },
+    {
+      "firstName": "Smokey",
+      "lastName": "Robinson",
+      "username": "Smokey",
+      "password": "1234",
+      "id": 4
     }
   ],
   "photoAlbums": [
@@ -71,6 +78,34 @@
       "userId": 1,
       "trash": false,
       "id": 7
+    },
+    {
+      "title": "My Tours",
+      "description": "1234",
+      "userId": 1,
+      "trash": false,
+      "id": 8
+    },
+    {
+      "title": "Smokes Tour",
+      "description": "Happy GO Lucky",
+      "userId": 4,
+      "trash": false,
+      "id": 9
+    },
+    {
+      "title": "test",
+      "description": "This might work?!?!",
+      "userId": 4,
+      "trash": false,
+      "id": 10
+    },
+    {
+      "title": "First Tour",
+      "description": "This might work?!?!",
+      "userId": 1,
+      "trash": false,
+      "id": 11
     }
   ],
   "VRimages": [
@@ -201,6 +236,22 @@
       "description": "Its a better front door than yours!",
       "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592595040/360imgFolder/osua2g5feppqq2sure7m.jpg",
       "id": 18
+    },
+    {
+      "userId": 1,
+      "photoAlbumId": 8,
+      "name": "Sub",
+      "description": "its a sub",
+      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592832789/360imgFolder/fbrpmfddjst8hxjbhalh.jpg",
+      "id": 19
+    },
+    {
+      "userId": 4,
+      "photoAlbumId": 9,
+      "name": "Submarine",
+      "description": "It was a cool place",
+      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592835646/360imgFolder/wclw0octgf9qw1eiwmpn.jpg",
+      "id": 20
     }
   ]
 }
