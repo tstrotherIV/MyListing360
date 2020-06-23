@@ -1,25 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "./home.css";
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+import { Button, Modal } from "reactstrap";
 import Login from "../Auth/login";
 import DataManager from "../../modules/DataManager";
 
 const HomePage = (props) => {
-  const { className } = props;
-
   const [modal, setModal] = useState(false);
-
-  const toggle = () => setModal(!modal);
-
+  const [hidden, sethidden] = useState(false);
   const [credentials, setCredentials] = useState({
     username: "",
     password: "",
   });
-  // const [users, setUsers] = useState({ username: "", password: "" });
-  // const [isLoading, setIsLoading] = useState(false);
 
-  // Update state whenever an input field is edited
+  const { className } = props;
+
+  const toggle = () => setModal(!modal);
+
   const handleFieldChange = (evt) => {
     const stateToChange = { ...credentials };
     stateToChange[evt.target.id] = evt.target.value;
@@ -49,6 +46,38 @@ const HomePage = (props) => {
     }
   };
 
+  // const checkForUser = () => {
+  //   if (credentials !== "") {
+  //     sethidden(
+  //       <div>
+  //         <Button color="danger" onClick={toggle}>
+  //           Sign In
+  //         </Button>
+  //         <Modal
+  //           isOpen={modal}
+  //           toggle={toggle}
+  //           className={className}
+  //           centered={true}
+  //           fade={true}
+  //         >
+  //           <section>
+  //             <Login
+  //               handleLogin={handleLogin}
+  //               handleFieldChange={handleFieldChange}
+  //               setUser={props.setUser}
+  //               {...props}
+  //             />
+  //           </section>
+  //         </Modal>
+  //       </div>
+  //     );
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   checkForUser();
+  // }, []);
+
   return (
     <section>
       <section className="homebkgd BGDimg ">
@@ -74,13 +103,13 @@ const HomePage = (props) => {
           <section className="CreateAccSect ">
             <div className="createAccBtn">Don't have an account?</div>
             <NavLink to={"/createAcct"}>
-              <button className="viewTourBtn gap">Create Account</button>
+              <Button color="info" className="viewTourBtn gap">
+                Create Account
+              </Button>
             </NavLink>
           </section>
-          <section className="signInBtn ">
-            {/* <NavLink to="/login">
-              <button type="button">Sign In</button>
-            </NavLink> */}
+          <section className="signInBtn">
+            {" "}
             <div>
               <Button color="danger" onClick={toggle}>
                 Sign In

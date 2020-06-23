@@ -2,11 +2,15 @@ import React, { useState, useEffect } from "react";
 import "aframe";
 import DataManager from "../../modules/DataManager";
 import "./tourViewer.css";
+import { Collapse, Button, CardBody, Card, Container } from "reactstrap";
 
 const TourViewer = (props) => {
   const [images, setImages] = useState([]);
   const [newImage, setnewImage] = useState([]);
   const [tourName, settourName] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
 
   const handleFieldChange = (evt) => {
     const stateToChange = evt.target.value;
@@ -26,20 +30,16 @@ const TourViewer = (props) => {
   }, []);
 
   return (
-    <div className="tourViewerSect">
-      <h4 className="tourNameHeader move">{tourName.title}</h4>
-      <h4 className="tourNameHeader move viewerDescription">
-        {" "}
-        Tour Description: <h5>{tourName.description}</h5>
-      </h4>
+    <Container className="tourViewerSect">
       <div className="move">
         <section className="vrImageViewer1 move container">
           <a-scene class="aframebox1" embedded>
             <a-sky src={newImage}></a-sky>
           </a-scene>
-          <section className="tourImageLinks1 move topleft">
+          <section className="tourImageLinks1 move topright">
             {images.map((image) => (
-              <button
+              <Button
+                color="info"
                 key={image.id}
                 className="imageBtns"
                 id={image.id}
@@ -47,12 +47,27 @@ const TourViewer = (props) => {
                 onClick={handleFieldChange}
               >
                 {image.name}
-              </button>
+              </Button>
             ))}
           </section>
+          <h6 className="tourTitle tourNameHeader move">{tourName.title}</h6>
+          <div className="topleft tourImageLinks1 move ">
+            <Button
+              color="primary"
+              onClick={toggle}
+              style={{ marginBottom: "1rem" }}
+            >
+              Tour Description
+            </Button>
+            <Collapse isOpen={isOpen}>
+              <Card>
+                <CardBody>{tourName.description}</CardBody>
+              </Card>
+            </Collapse>
+          </div>
         </section>
       </div>
-    </div>
+    </Container>
   );
 };
 

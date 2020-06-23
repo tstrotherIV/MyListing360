@@ -72,3 +72,16 @@
   padding: 10px;
   border-radius: 5px;
 }
+
+.tourcards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  /* align-items: flex-start; */
+}
+
+.changeFont {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}

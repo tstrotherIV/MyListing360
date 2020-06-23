@@ -1,6 +1,6 @@
 .tourImages {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .tourImageSect {
@@ -10,12 +10,9 @@
 }
 
 .sepImage {
-  flex-shrink: 3;
-  flex-basis: 10%;
   padding: 8px;
   margin: 15px;
   box-shadow: 5px 10px 7px #888888;
-  background: #c2cad0;
 }
 
 .descriptionBox {
@@ -42,7 +39,24 @@
   padding: 8px;
 }
 
-.deleteTourBtn:hover {
-  color: white;
-  cursor: pointer;
+.Desc {
+  min-height: 400px;
+}
+
+.imageDisplaySect {
+  display: flex;
+  flex-direction: row;
+}
+
+.imageCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border: solid black 1px;
+  margin: 20px;
+  padding: 8px;
+  flex-shrink: inherit;
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 5px 10px 7px #00000056;
 }

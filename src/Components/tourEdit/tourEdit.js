@@ -2,7 +2,16 @@ import React, { useState, useEffect } from "react";
 import DataManager from "../../modules/DataManager";
 import EditAddImage from "../addImage/addImage";
 import "./tourEdit.css";
-import { Button } from "reactstrap";
+import {
+  Card,
+  CardImg,
+  CardTitle,
+  Button,
+  Form,
+  FormGroup,
+  Label,
+  Input,
+} from "reactstrap";
 
 const EditTour = (props) => {
   const [loading, setLoading] = useState(false);
@@ -69,29 +78,33 @@ const EditTour = (props) => {
 
   return (
     <>
-      <form>
+      <Form>
         <fieldset>
           <div className="tourContent">
             <h2 className="alignLeft">Edit your Tour Details</h2>
-            <label htmlFor="name">Tour Name</label>
-            <input
-              type="text"
-              required
-              className="form-control"
-              onChange={handleFieldChange}
-              id="title"
-              value={photoAlbum.title}
-            />
+            <FormGroup>
+              <Label htmlFor="name">Tour Name</Label>
+              <Input
+                type="text"
+                required
+                className="form-control"
+                onChange={handleFieldChange}
+                id="title"
+                value={photoAlbum.title}
+              />
+            </FormGroup>
 
-            <label htmlFor="Description">Description</label>
-            <input
-              type="text"
-              required
-              className="descriptionBox"
-              onChange={handleFieldChange}
-              id="description"
-              value={photoAlbum.description}
-            />
+            <FormGroup>
+              <Label htmlFor="Description">Description</Label>
+              <Input
+                type="textarea"
+                required
+                className="Desc"
+                onChange={handleFieldChange}
+                id="description"
+                value={photoAlbum.description}
+              />
+            </FormGroup>
             <div className="submitBtn">
               <button
                 type="button"
@@ -106,31 +119,36 @@ const EditTour = (props) => {
           <br></br>
           <section className="tourImageSect">
             <h2>Remove Images from your Tour</h2>
-            <section className="tourImages">
-              {images.map((image) => (
-                <section
-                  className="sepImage"
-                  key={image.id}
-                  id={image.id}
-                  value={image.name}
-                >
-                  {image.name}{" "}
-                  <Button
-                    outline
-                    color="danger"
-                    className="deleteTourBtn gap"
-                    onClick={() => {
-                      deleteImage(image.id);
-                    }}
+            <div className="imageDisplaySect">
+              <Card className="imageCards">
+                {images.map((image) => (
+                  <section
+                    className="sepImage"
+                    key={image.id}
+                    id={image.id}
+                    value={image.name}
                   >
-                    Remove Image
-                  </Button>
-                  <br></br>
-                  <img src={image.url} alt="" style={{ width: "300px" }} />
-                  <br></br>
-                </section>
-              ))}
-            </section>
+                    <CardTitle>{image.name} </CardTitle>
+
+                    <CardImg
+                      src={image.url}
+                      alt=""
+                      style={{ width: "300px" }}
+                    />
+                    <Button
+                      outline
+                      color="danger"
+                      className="deleteTourBtn gap"
+                      onClick={() => {
+                        deleteImage(image.id);
+                      }}
+                    >
+                      Remove Image
+                    </Button>
+                  </section>
+                ))}
+              </Card>
+            </div>
           </section>
           <section>
             <div className="editAddNewImg">
@@ -142,7 +160,7 @@ const EditTour = (props) => {
             </div>
           </section>
         </fieldset>
-      </form>
+      </Form>
     </>
   );
 };

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import DataManager from "../../../modules/DataManager";
 import "./tourCreator.css";
+import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
 
 const CreatephotoAlbum = (props) => {
   const [photoAlbum, setphotoAlbum] = useState({
@@ -29,38 +30,43 @@ const CreatephotoAlbum = (props) => {
     }
   };
   return (
-    <form>
+    <Form>
       <fieldset className="createTourFrom center">
         <section className="createTourHead ">
           <h4>Step 1... Please Fill in the fields below</h4>
         </section>
         <div className="createTourFormFields">
-          <input
-            onChange={handleFieldChange}
-            type="text"
-            id="title"
-            placeholder="Name your Virtual Tour (eg: Listing Address)"
-          />
+          <FormGroup>
+            <Input
+              onChange={handleFieldChange}
+              type="text"
+              id="title"
+              placeholder="Name your Virtual Tour (eg: Listing Address)"
+            />
+          </FormGroup>
 
-          <input
-            onChange={handleFieldChange}
-            type="text"
-            id="description"
-            placeholder="Enter a Description for the Tour (eg: “square footage, number of rooms…”) "
-            required
-          />
+          <FormGroup>
+            <Input
+              onChange={handleFieldChange}
+              type="textarea"
+              name="text"
+              id="description"
+              placeholder="Enter a Description for the Tour (eg: “square footage, number of rooms…”) "
+            />
+          </FormGroup>
         </div>
         <div className="alignRight">
-          <button
+          <Button
+            color="success"
             type="button"
             disabled={isLoading}
             onClick={constructNewphotoAlbum}
           >
             Save and Add 360 Images to your tour!
-          </button>
+          </Button>{" "}
         </div>
       </fieldset>
-    </form>
+    </Form>
   );
 };
 
