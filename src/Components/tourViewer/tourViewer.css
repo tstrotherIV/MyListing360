@@ -2,6 +2,7 @@
   height: 720px;
   width: 1200px;
   box-shadow: 5px 10px 7px #888888;
+  margin-top: 10px;
 }
 
 .tourViewerSect {
@@ -36,12 +37,31 @@
 
 .topleft {
   position: absolute;
-  top: 8px;
+  top: 28px;
   left: 16px;
   font-size: 18px;
+}
+.topright {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+.tourTitle {
+  background: white;
+  margin-left: 4px;
+  padding: 4px;
+  position: absolute;
+  top: 8px;
+  left: 18px;
+  border-radius: 4px;
 }
 
 .vrImageViewer {
   display: flex;
   flex-shrink: initial;
+}
+
+.smallText {
+  font-size: 0.7em;
 }

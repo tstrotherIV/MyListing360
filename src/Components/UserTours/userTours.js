@@ -34,16 +34,6 @@ const UserTours = (props) => {
     });
   };
 
-  // const deleteTour = (id) => {
-  //   DataManager.delete("photoAlbums", id).then(() =>
-  //     DataManager.getUsersTours("photoAlbums", props.userId).then(
-  //       (toursFromAPI) => {
-  //         setTours(toursFromAPI);
-  //       }
-  //     )
-  //   );
-  // };
-
   const getTours = () => {
     return DataManager.getUsersTours("photoAlbums", props.userId, false).then(
       (toursFromAPI) => {
@@ -64,7 +54,7 @@ const UserTours = (props) => {
     <>
       <section className="pgContainer bkgd">
         <div className="tourPgHeader centerItem">
-          <h5 className="margin4">
+          <h5 className="margin4 changeFont">
             {sessionStorage.getItem("loggedUserName")}, here is your Virtual
             Tour Dashboard
           </h5>
@@ -82,12 +72,15 @@ const UserTours = (props) => {
               Deleted Tours{" "}
             </Button>
           </div>
-          <h5 className="createdVirtualToursHead">Created Virtual Tours</h5>
+          <h5 className="createdVirtualToursHead changeFont">
+            Created Virtual Tours
+          </h5>
+          <hr className="blueDevideLine"></hr>
           <section className="createTourBtn">
             <NavLink to="/createphotoAlbum" className="createphotoAlbum">
               <Button
                 outline
-                color="primary"
+                color="success"
                 className="createTour bgBlueTheme  button1"
                 type="button"
               >
@@ -95,9 +88,8 @@ const UserTours = (props) => {
               </Button>
             </NavLink>
           </section>
-          <hr className="blueDevideLine"></hr>
           <section className="tourDisplaySect">
-            <div className="container-cards">
+            <div className="tourcards">
               {tours.map((tour) => (
                 <TourCard
                   key={tour.id}

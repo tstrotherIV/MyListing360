@@ -27,8 +27,8 @@ const Login = (props) => {
         if (user.length < 1) {
           window.alert("User Account doesn't exist, Please Create an account");
         } else if (
-          user[0].username === credentials.username ||
-          user[0].password === credentials.password
+          user[0].username === credentials.username &&
+          user[0].password === parseInt(credentials.password)
         ) {
           sessionStorage.setItem("loggedUser", user[0].id);
           sessionStorage.setItem("loggedUserName", user[0].firstName);
