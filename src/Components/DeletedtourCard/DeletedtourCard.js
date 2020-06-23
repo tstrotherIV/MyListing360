@@ -5,7 +5,7 @@ import "./DeletedtourCard.css";
 
 const DeletedTourCard = (props) => {
   return (
-    <div className="tourCard">
+    <div className="tourCardDeleted">
       <section className="tourName">
         <h6>Tour Name:</h6>
         <h4>{props.tour.title}</h4>

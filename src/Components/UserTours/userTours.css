@@ -19,18 +19,17 @@
 .tourFilterAndTrash {
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
 }
 .tourFilterBoxes {
   justify-content: center;
 }
 
 .createTour {
-  width: 1000px;
   padding: 4px;
   color: white;
-  /* text-shadow: #000 1px 1px 1px; */
-  font-size: 1.5em;
+  font-size: 1em;
+  border-radius: 5px;
+  border: solid 1px black;
 }
 
 .filterByNameBox {
@@ -59,4 +58,17 @@
   background-color: blue;
   color: white;
   cursor: pointer;
+}
+
+.bkgd {
+  background: rgb(255, 255, 255);
+}
+
+.margin4 {
+  margin: 4px;
+}
+
+.createphotoAlbum {
+  padding: 10px;
+  border-radius: 5px;
 }

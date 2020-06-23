@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import DataManager from "../../modules/DataManager";
 import EditAddImage from "../addImage/addImage";
 import "./tourEdit.css";
+import { Button } from "reactstrap";
 
 const EditTour = (props) => {
   const [loading, setLoading] = useState(false);
@@ -114,14 +115,16 @@ const EditTour = (props) => {
                   value={image.name}
                 >
                   {image.name}{" "}
-                  <button
+                  <Button
+                    outline
+                    color="danger"
                     className="deleteTourBtn gap"
                     onClick={() => {
                       deleteImage(image.id);
                     }}
                   >
                     Remove Image
-                  </button>
+                  </Button>
                   <br></br>
                   <img src={image.url} alt="" style={{ width: "300px" }} />
                   <br></br>

@@ -76,3 +76,9 @@
 .signInBtn {
   justify-items: right;
 }
+
+.whiteBkgd {
+  background: white;
+  padding: 20px;
+  border-radius: 4px;
+}

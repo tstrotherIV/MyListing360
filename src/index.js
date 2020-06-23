@@ -4,6 +4,7 @@ import "./index.css";
 // import App from "./Components/App";
 import Site360 from "./Components/Site360";
 import { BrowserRouter as Router } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.render(
   <Router>
