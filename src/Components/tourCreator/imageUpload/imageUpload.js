@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import DataManager from "../../../modules/DataManager";
 import "aframe";
 import "./imageUpload.css";
+import { Button } from "reactstrap";
 
 function ImageUpload(props) {
   const [image, setImage] = useState();
@@ -74,7 +75,7 @@ function ImageUpload(props) {
         <h2 className="imgPreviewHeader">
           Image Preview (Click and drap on image to view in VR)
         </h2>
-        <div className="container">
+        <div className="container1">
           <a-scene class="aframebox" embedded>
             <a-sky src={image}></a-sky>
           </a-scene>
@@ -101,14 +102,16 @@ function ImageUpload(props) {
       <section className="saveImgSect">
         <h4>Step 3...</h4>
         <div className="imageSaveBtn">
-          <button
+          <Button
+            outline
+            color="success"
             type="button"
             className="right"
             disabled={""}
             onClick={addNewImage}
           >
             Add Image to my tour!
-          </button>
+          </Button>
         </div>
       </section>
     </div>

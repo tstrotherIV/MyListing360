@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import TourCard from "../tourCard/tourCard";
 import DataManager from "../../modules/DataManager";
+import { Button } from "reactstrap";
 import "./userTours.css";
 
 const UserTours = (props) => {
@@ -61,33 +62,40 @@ const UserTours = (props) => {
 
   return (
     <>
-      <section className="pgContainer">
+      <section className="pgContainer bkgd">
         <div className="tourPgHeader centerItem">
-          <h5>
+          <h5 className="margin4">
             {sessionStorage.getItem("loggedUserName")}, here is your Virtual
             Tour Dashboard
           </h5>
         </div>
-        <div className="centerItem">
-          <NavLink to="/createphotoAlbum">
-            <button
-              className="createTour bgBlueTheme noBtnBorder button1"
-              type="button"
-            >
-              + Create a New Virtual Tour of my Real Estate Listing
-            </button>
-          </NavLink>
-        </div>
+        <div className="centerItem"></div>
         <section className="tourFilterAndTrash">
           <div className="tourFilterBoxes">
-            <button className="trash" onClick={userTrash}>
+            <Button
+              outline
+              color="danger"
+              className="trash"
+              onClick={userTrash}
+            >
               {" "}
               Deleted Tours{" "}
-            </button>
+            </Button>
           </div>
           <h5 className="createdVirtualToursHead">Created Virtual Tours</h5>
+          <section className="createTourBtn">
+            <NavLink to="/createphotoAlbum" className="createphotoAlbum">
+              <Button
+                outline
+                color="primary"
+                className="createTour bgBlueTheme  button1"
+                type="button"
+              >
+                + Create a New Virtual Tour
+              </Button>
+            </NavLink>
+          </section>
           <hr className="blueDevideLine"></hr>
-
           <section className="tourDisplaySect">
             <div className="container-cards">
               {tours.map((tour) => (

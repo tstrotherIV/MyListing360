@@ -2,7 +2,7 @@
   "users": [
     {
       "id": 1,
-      "firstName": "James",
+      "firstName": "Jake",
       "lastName": "Decker",
       "username": "Jake",
       "password": 1234
@@ -32,20 +32,20 @@
   "photoAlbums": [
     {
       "id": 1,
-      "title": "234 Daven Drive",
+      "title": "234 Daven Drive, Nashville TN 37211",
       "description": "Don't wait to see this ONE-OF-A-KIND, CUSTOM BUILT home in lovely, highly-desirable CLERMONT LAKEVIEW HILLS subdivision, ON A LARGE LOT. BEAUTIFUL VIEWS OF LAKE MINNEHAHA from virtually every room in this home! OPEN FLOOR PLAN with a Great Room that features sweeping panoramic windows facing the lake, warm & welcoming indirect lighting, updated ceiling fans and Travertine floors. SPLIT FLOOR PLAN has bedrooms at opposite ends of the home, for privacy, and each has sliding glass doors through which you can access a balcony overlooking the lake. ROOF 2016. The kitchen features STAINLESS STEEL APPLIANCES (2018) and custom cabinetry. New ceiling fans and energy-efficient LED lighting; updated, easy maintenance landscaping. OVERSIZED GARAGE affords plenty of room for a work area PLUS 2 vehicles. Residents of this HOA enjoy DIRECT LAKE ACCESS via a community dock on Minnehaha, only a few hundred yards from your front door. Close to Clermont shopping, services and the West Orange bike trail. Make an appointment today to see this unique designer home.",
       "userId": 1,
       "trash": false
     },
     {
       "id": 2,
-      "title": "233 Danver LN",
+      "title": "233 Danver LN, Nashville TN 37211",
       "description": "Gorgeous POOL HOME with CHAIN OF LAKES ACCESS ready for it's new owners to enjoy! Let the shaded front yard welcome you home with it's beautiful landscape and quiet cul de sac setting. Once inside, the spacious rooms and thoughtful design will surely impress all members of the family. The split bedroom floor plan ensures a quiet retreat in the large master bedroom with guest rooms sizable enough to accommodate family of all ages. Add the versatility of the massive bonus room upstairs and you have a home that's truly hard to beat! Outdoor living here is a must and the Central Florida lifestyle beckons with a huge pool deck for cooking out or entertaining and a refreshing pool to cool off in the summer heat! So many details to see and appreciate...from the walk in pantry, tray ceiling in the master bedroom, hurricane shutters, double pane windows, newer roof and A/C , fireplace, irrigation system the list goes on and on! Conveniently located in the heart of Clermont, this is definitely one you'll want to see before it gets away!!",
       "userId": 1,
       "trash": false
     },
     {
-      "title": "983 Groveland St",
+      "title": "983 Groveland St, Nashville TN 37211",
       "description": "Rare opportunity to own a classic home built in 1925 in downtown Clermont. This 3 bed 2 bath home boasts original hardwood floors, metal roof, 9 foot ceilings as well as wood burning fireplace. Additional space for a home office as well. Oversized quiet lot on a mature tree lined street. Right down the road is access to 2 community boat ramps. This home is minutes from historic downtown Clermont, newly revitalized with many dining and entertainment options including a weekly farmers market. This is your opportunity to be at the center of everything. Close to shopping. Easy access to major roadways, downtown Orlando and Disney area attractions. Call now to schedule your showing!. All information provided is not guaranteed and the buyer should verify all information.",
       "userId": 2,
       "id": 3,
@@ -56,34 +56,34 @@
       "title": "Brians Tour Is great",
       "description": "Awesomeness of Awesomeness",
       "userId": 1,
-      "trash": false
+      "trash": true
     },
     {
       "id": 5,
       "title": "Brians Tour Is great",
       "description": "Awesomeness of Awesomeness",
       "userId": 1,
-      "trash": false
+      "trash": true
     },
     {
       "title": "New Tour",
       "description": "Awesome Home",
       "userId": 1,
-      "trash": false,
+      "trash": true,
       "id": 6
     },
     {
       "title": "First Tour",
       "description": "asdf",
       "userId": 1,
-      "trash": false,
+      "trash": true,
       "id": 7
     },
     {
       "title": "My Tours",
       "description": "1234",
       "userId": 1,
-      "trash": false,
+      "trash": true,
       "id": 8
     },
     {
@@ -104,7 +104,7 @@
       "title": "First Tour",
       "description": "This might work?!?!",
       "userId": 1,
-      "trash": false,
+      "trash": true,
       "id": 11
     }
   ],

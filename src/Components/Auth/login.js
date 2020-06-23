@@ -42,16 +42,18 @@ const Login = (props) => {
   };
 
   return (
-    <form onSubmit={handleLogin}>
-      <fieldset className="loginFrom center">
+    <form className="whiteBkgd" onSubmit={handleLogin}>
+      <fieldset className="loginFrom center whiteBkgd">
+        {/* <h4>Account Login</h4> */}
         <section className="loginAccessSect ">
-          <section className="loginCreateAccSect ">
+          {/* <section className="loginCreateAccSect ">
             <div className="logincreateAccBtn">Don't have an account?</div>
             <Link to={"/createAcct"}>
               <button className="viewTourBtn gap">Create Account</button>
             </Link>
-          </section>
+          </section> */}
         </section>
+        <h2>Sign In</h2>
         <div className="loginformFields">
           <input
             onChange={handleFieldChange}

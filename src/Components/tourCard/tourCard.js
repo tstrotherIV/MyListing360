@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 // import DataManager from "../../modules/DataManager";
-import { FacebookShareButton, FacebookIcon } from "react-share";
+import {
+  FacebookShareButton,
+  LinkedinShareButton,
+  FacebookIcon,
+  LinkedinIcon,
+} from "react-share";
 import "./tourCard.css";
+import { Button } from "reactstrap";
 
 const TourCard = (props) => {
   return (
@@ -18,19 +24,24 @@ const TourCard = (props) => {
       <section className="tourCrudBtns">
         <div className="tourEditBtns">
           <Link to={`/tourViewer/${props.tour.id}`}>
-            <button className="viewTourBtn gap">View Tour</button>
+            <Button color="secondary" className="viewTourBtn gap">
+              View Tour
+            </Button>
           </Link>
           <Link to={`/tourEdit/${props.tour.id}`}>
-            <button className="editTourBtn gap">Edit Tour</button>
+            <Button color="info" className="editTourBtn gap">
+              Edit Tour
+            </Button>
           </Link>
-          <button
+          <Button
+            color="danger"
             className="deleteTourBtn gap"
             onClick={() => {
               props.deleteTour(props.tour.id);
             }}
           >
             Delete Tour
-          </button>
+          </Button>
           <div>
             <h4>Share Tour</h4>
             <FacebookShareButton
@@ -39,6 +50,12 @@ const TourCard = (props) => {
             >
               <FacebookIcon size={32} round />
             </FacebookShareButton>
+            <LinkedinShareButton
+              url={`https://www.linkedin.com/in/tomstrother/`}
+              className="Demo__some-network__share-button"
+            >
+              <LinkedinIcon size={32} round />
+            </LinkedinShareButton>
           </div>
         </div>
       </section>
