@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Site360.css";
 import NavBar from "./Nav/nav";
 import ApplicationViews from "./ApplicationViews";
+import ReactGa from "react-ga";
 
 const Site360Home = (props) => {
   const isAuthenticated = () => sessionStorage.getItem("loggedUser") !== null;
@@ -18,6 +19,11 @@ const Site360Home = (props) => {
     sessionStorage.clear();
     setHasUser(isAuthenticated());
   };
+
+  useEffect(() => {
+    ReactGa.initialize("UA-170629224-1");
+    ReactGa.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   return (
     <>
