@@ -3,6 +3,7 @@ import "aframe";
 import DataManager from "../../modules/DataManager";
 import "./tourViewer.css";
 import { Collapse, Button, CardBody, Card, Container } from "reactstrap";
+import ReactGa from "react-ga";
 
 const TourViewer = (props) => {
   const [images, setImages] = useState([]);
@@ -13,6 +14,10 @@ const TourViewer = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   const handleFieldChange = (evt) => {
+    ReactGa.event({
+      category: "Button",
+      action: "clicked new image in tour",
+    });
     const stateToChange = evt.target.value;
     setnewImage(stateToChange);
   };
