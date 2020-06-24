@@ -45,6 +45,7 @@ const EditTour = (props) => {
       description: photoAlbum.description,
       userId: props.userId,
       trash: false,
+      views: photoAlbum.views,
     };
 
     DataManager.update("photoAlbums", editedTour).then(() =>

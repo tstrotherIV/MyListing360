@@ -10,6 +10,7 @@ const TourViewer = (props) => {
   const [newImage, setnewImage] = useState([]);
   const [tourName, settourName] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
+  const [count, setcount] = useState([]);
 
   const toggle = () => setIsOpen(!isOpen);
 
@@ -26,7 +27,17 @@ const TourViewer = (props) => {
     return DataManager.getTourImages(props.tourId).then((imagesfromDb) => {
       setImages(imagesfromDb.VRimages);
       settourName(imagesfromDb);
+      setcount(imagesfromDb.views);
       setnewImage(imagesfromDb.VRimages[0].url);
+    });
+  };
+
+  const updateTourCount = () => {
+    setcount((count) => count + 1);
+    DataManager.get(tourName.id, "photoAlbums", "").then((album) => {
+      const editedTour = { ...album };
+      editedTour.views = count;
+      DataManager.update("photoAlbums", editedTour);
     });
   };
 
@@ -71,6 +82,8 @@ const TourViewer = (props) => {
             </Collapse>
           </div>
         </section>
+        {/* <div>count: {count}</div> */}
+        {/* <button onClick={updateTourCount}>Count</button> */}
       </div>
     </Container>
   );

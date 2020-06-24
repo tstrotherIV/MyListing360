@@ -9,6 +9,7 @@ const CreatephotoAlbum = (props) => {
     description: "",
     userId: props.userId,
     trash: false,
+    views: 0,
   });
   const [isLoading, setIsLoading] = useState(false);
 

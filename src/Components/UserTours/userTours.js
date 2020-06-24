@@ -9,12 +9,7 @@ const UserTours = (props) => {
   const [tours, setTours] = useState([]);
   const [album, setAlbum] = useState([]);
   const [loading, setLoading] = useState(false);
-
-  // const handleFieldChange = (evt) => {
-  //   const stateToChange = { ...tourName };
-  //   stateToChange[evt.target.id] = evt.target.value;
-  //   setTourName(stateToChange);
-  // };
+  const [TrashedTours, setTrashedTours] = useState([]);
 
   const updateTour = (id) => {
     setLoading(true);
@@ -23,7 +18,6 @@ const UserTours = (props) => {
       setAlbum(album);
       const editedTour = { ...album };
       editedTour.trash = true;
-      // console.log(editedTour);
       DataManager.update("photoAlbums", editedTour).then((newTours) => {
         DataManager.getUsersTours("photoAlbums", props.userId, false).then(
           (toursFromAPI) => {
@@ -46,9 +40,24 @@ const UserTours = (props) => {
     props.history.push(`/tours/${props.userId}/trash`);
   };
 
+  // const numberOfTrashedTours = () => {
+  //   const num = tours.filter((tour) => tour.trash === true);
+  //   console.log(num.length);
+  //   return num.length;
+  // };
+  // numberOfTrashedTours();
+
   useEffect(() => {
     getTours();
   }, []);
+
+  useEffect(() => {
+    DataManager.getUsersTours("photoAlbums", props.userId, true).then(
+      (toursFromAPI) => {
+        setTrashedTours(toursFromAPI);
+      }
+    );
+  }, [tours, props.userId]);
 
   return (
     <>
@@ -69,7 +78,7 @@ const UserTours = (props) => {
               onClick={userTrash}
             >
               {" "}
-              Deleted Tours{" "}
+              Deleted Tours ({TrashedTours.length}){" "}
             </Button>
           </div>
           <h5 className="createdVirtualToursHead changeFont">
