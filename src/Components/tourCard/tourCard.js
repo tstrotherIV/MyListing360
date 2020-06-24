@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-// import DataManager from "../../modules/DataManager";
+import React from "react";
 import {
   FacebookShareButton,
   LinkedinShareButton,
@@ -8,14 +6,7 @@ import {
   LinkedinIcon,
 } from "react-share";
 import "./tourCard.css";
-import {
-  Card,
-  CardText,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  Button,
-} from "reactstrap";
+import { Card, CardText, CardBody, CardTitle, Button } from "reactstrap";
 
 const TourCard = (props) => {
   return (

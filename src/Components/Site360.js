@@ -22,7 +22,7 @@ const Site360Home = (props) => {
 
   useEffect(() => {
     ReactGa.initialize("UA-170629224-1");
-    ReactGa.pageview(window.location.pathname + window.location.search);
+    ReactGa.pageview(window.location.pathname);
   }, []);
 
   return (
