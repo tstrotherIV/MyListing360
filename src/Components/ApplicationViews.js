@@ -23,7 +23,7 @@ const ApplicationViews = (props) => {
         exact
         path="/"
         render={(props) => {
-          return <HomePage setUser={setUser} {...props} />;
+          return <HomePage setUser={setUser} hasUser={hasUser} {...props} />;
         }}
       />
       <Route

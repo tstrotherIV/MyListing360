@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "./home.css";
-import { Button, Modal } from "reactstrap";
-import Login from "../Auth/login";
+import { Button } from "reactstrap";
+// import Login from "../Auth/login";
 import DataManager from "../../modules/DataManager";
+import SignInBtn from "../Home/signIn";
 
 const HomePage = (props) => {
-  const [modal, setModal] = useState(false);
+  const [signIn, setSignIn] = useState(false);
   const [credentials, setCredentials] = useState({
     username: "",
     password: "",
   });
 
-  const { className } = props;
+  // const { className } = props;
 
-  const toggle = () => setModal(!modal);
+  // const toggle = () => setModal(!modal);
 
   const handleFieldChange = (evt) => {
     const stateToChange = { ...credentials };
@@ -44,6 +45,23 @@ const HomePage = (props) => {
       });
     }
   };
+
+  const checkForUser = () => {
+    let item = props.hasUser;
+    if (item === false) {
+      setSignIn(
+        <SignInBtn
+          handleFieldChange={handleFieldChange}
+          handleLogin={handleLogin}
+          {...props}
+        />
+      );
+    }
+  };
+
+  useEffect(() => {
+    checkForUser();
+  }, [props.hasUser]);
 
   return (
     <section>
@@ -75,30 +93,7 @@ const HomePage = (props) => {
               </Button>
             </NavLink>
           </section>
-          <section className="signInBtn">
-            {" "}
-            <div>
-              <Button color="danger" onClick={toggle}>
-                Sign In
-              </Button>
-              <Modal
-                isOpen={modal}
-                toggle={toggle}
-                className={className}
-                centered={true}
-                fade={true}
-              >
-                <section>
-                  <Login
-                    handleLogin={handleLogin}
-                    handleFieldChange={handleFieldChange}
-                    setUser={props.setUser}
-                    {...props}
-                  />
-                </section>
-              </Modal>
-            </div>
-          </section>
+          <section className="signInBtn"> {signIn}</section>
         </section>
       </section>
     </section>
