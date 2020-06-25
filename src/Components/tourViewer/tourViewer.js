@@ -4,13 +4,12 @@ import DataManager from "../../modules/DataManager";
 import "./tourViewer.css";
 import { Collapse, Button, CardBody, Card, Container } from "reactstrap";
 import ReactGa from "react-ga";
+import ImagesCard from "./imagesCard/imagesCard";
 
 const TourViewer = (props) => {
-  const [images, setImages] = useState([]);
+  const [tourData, setTourData] = useState([]);
   const [newImage, setnewImage] = useState([]);
-  const [tourName, settourName] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
-  const [count, setcount] = useState([]);
 
   const toggle = () => setIsOpen(!isOpen);
 
@@ -23,27 +22,12 @@ const TourViewer = (props) => {
     setnewImage(stateToChange);
   };
 
-  const getTourImages = () => {
-    return DataManager.getTourImages(props.tourId).then((imagesfromDb) => {
-      setImages(imagesfromDb.VRimages);
-      settourName(imagesfromDb);
-      setcount(imagesfromDb.views);
-      setnewImage(imagesfromDb.VRimages[0].url);
-    });
-  };
-
-  const updateTourCount = () => {
-    setcount((count) => count + 1);
-    DataManager.get(tourName.id, "photoAlbums", "").then((album) => {
-      const editedTour = { ...album };
-      editedTour.views = count;
-      DataManager.update("photoAlbums", editedTour);
-    });
-  };
-
   useEffect(() => {
-    getTourImages();
-  }, []);
+    DataManager.getTourImages(props.tourId).then((tourInfo) => {
+      setTourData(tourInfo);
+      setnewImage(tourInfo.VRimages[0].url);
+    });
+  }, [props.tourId]);
 
   return (
     <Container className="tourViewerSect">
@@ -53,20 +37,9 @@ const TourViewer = (props) => {
             <a-sky src={newImage}></a-sky>
           </a-scene>
           <section className="tourImageLinks1 move topright">
-            {images.map((image) => (
-              <Button
-                color="info"
-                key={image.id}
-                className="imageBtns"
-                id={image.id}
-                value={image.url}
-                onClick={handleFieldChange}
-              >
-                {image.name}
-              </Button>
-            ))}
+            <ImagesCard handleFieldChange={handleFieldChange} {...props} />
           </section>
-          <h6 className="tourTitle tourNameHeader move">{tourName.title}</h6>
+          <h6 className="tourTitle tourNameHeader move">{tourData.title}</h6>
           <div className="topleft tourImageLinks1 move ">
             <Button
               color="primary"
@@ -77,13 +50,11 @@ const TourViewer = (props) => {
             </Button>
             <Collapse isOpen={isOpen}>
               <Card>
-                <CardBody>{tourName.description}</CardBody>
+                <CardBody>{tourData.description}</CardBody>
               </Card>
             </Collapse>
           </div>
         </section>
-        {/* <div>count: {count}</div> */}
-        {/* <button onClick={updateTourCount}>Count</button> */}
       </div>
     </Container>
   );

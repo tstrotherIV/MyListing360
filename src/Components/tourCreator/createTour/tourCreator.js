@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import DataManager from "../../../modules/DataManager";
 import "./tourCreator.css";
-import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
+import { Button, Form, FormGroup, Input } from "reactstrap";
 
 const CreatephotoAlbum = (props) => {
   const [photoAlbum, setphotoAlbum] = useState({

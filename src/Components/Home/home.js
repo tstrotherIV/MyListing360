@@ -7,7 +7,6 @@ import DataManager from "../../modules/DataManager";
 
 const HomePage = (props) => {
   const [modal, setModal] = useState(false);
-  const [hidden, sethidden] = useState(false);
   const [credentials, setCredentials] = useState({
     username: "",
     password: "",
@@ -45,38 +44,6 @@ const HomePage = (props) => {
       });
     }
   };
-
-  // const checkForUser = () => {
-  //   if (credentials !== "") {
-  //     sethidden(
-  //       <div>
-  //         <Button color="danger" onClick={toggle}>
-  //           Sign In
-  //         </Button>
-  //         <Modal
-  //           isOpen={modal}
-  //           toggle={toggle}
-  //           className={className}
-  //           centered={true}
-  //           fade={true}
-  //         >
-  //           <section>
-  //             <Login
-  //               handleLogin={handleLogin}
-  //               handleFieldChange={handleFieldChange}
-  //               setUser={props.setUser}
-  //               {...props}
-  //             />
-  //           </section>
-  //         </Modal>
-  //       </div>
-  //     );
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   checkForUser();
-  // }, []);
 
   return (
     <section>
