@@ -8,8 +8,6 @@ const Login = (props) => {
     username: "",
     password: "",
   });
-  // const [users, setUsers] = useState({ username: "", password: "" });
-  // const [isLoading, setIsLoading] = useState(false);
 
   // Update state whenever an input field is edited
   const handleFieldChange = (evt) => {
@@ -45,14 +43,7 @@ const Login = (props) => {
     <form className="whiteBkgd" onSubmit={handleLogin}>
       <fieldset className="loginFrom center whiteBkgd">
         {/* <h4>Account Login</h4> */}
-        <section className="loginAccessSect ">
-          {/* <section className="loginCreateAccSect ">
-            <div className="logincreateAccBtn">Don't have an account?</div>
-            <Link to={"/createAcct"}>
-              <button className="viewTourBtn gap">Create Account</button>
-            </Link>
-          </section> */}
-        </section>
+        <section className="loginAccessSect "></section>
         <h2>Sign In</h2>
         <div className="loginformFields">
           <input

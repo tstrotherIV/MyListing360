@@ -9,12 +9,6 @@ const Trash = (props) => {
   const [album, setAlbum] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  // const handleFieldChange = (evt) => {
-  //   const stateToChange = { ...tourName };
-  //   stateToChange[evt.target.id] = evt.target.value;
-  //   setTourName(stateToChange);
-  // };
-
   const putTourBack = (id) => {
     setLoading(true);
 

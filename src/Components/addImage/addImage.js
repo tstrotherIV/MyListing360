@@ -24,11 +24,7 @@ function EditAddImage(props) {
 
   const addNewImage = (evt) => {
     evt.preventDefault();
-    if (
-      photoAlbum.name === "" ||
-      photoAlbum.description === ""
-      // || photoAlbum.url === ""
-    ) {
+    if (photoAlbum.name === "" || photoAlbum.description === "") {
       window.alert("Please complete the form");
     } else {
       setLoading(true);

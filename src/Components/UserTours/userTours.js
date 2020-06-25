@@ -40,13 +40,6 @@ const UserTours = (props) => {
     props.history.push(`/tours/${props.userId}/trash`);
   };
 
-  // const numberOfTrashedTours = () => {
-  //   const num = tours.filter((tour) => tour.trash === true);
-  //   console.log(num.length);
-  //   return num.length;
-  // };
-  // numberOfTrashedTours();
-
   useEffect(() => {
     getTours();
   }, []);
