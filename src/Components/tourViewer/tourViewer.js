@@ -30,9 +30,9 @@ const TourViewer = (props) => {
   }, [props.tourId]);
 
   return (
-    <Container className="tourViewerSect">
-      <div className="move">
-        <section className="vrImageViewer1 move container">
+    <Container>
+      <div>
+        <section>
           <a-scene class="aframebox1" embedded>
             <a-sky src={newImage}></a-sky>
           </a-scene>
