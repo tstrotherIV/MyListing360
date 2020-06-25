@@ -1,33 +1,18 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Mylisting360 - Description
 
-## Available Scripts
+MyListing360 is an easy to use Virtual Tour builder and hosting site for Real Estate Agents and Photographers. Visitors to the site are able to create a user account where they can build and host the tours via their user Dashboard. While in the Dashboard users can create a new tour or view their existing tours previously built. After a tour is fully built with Images and Descriptions a tour can then be shared on Facebook or Linkedin.
 
-In the project directory, you can run:
+## `What Can you do?`
 
-### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
+• Create a new User Account
+• Log into an existing Account (contains your specific user Virtual Tours)
+• Create a New Virtual Tour in the User Dashboard
+• View/ Edit/ Delete each Virtual Tour via the User Dashboard
+• When tours are Deleted from the User Dashboard they move to the User Trash can to await full Deletion.
+• Tours in the user Trash Can can either be restored back to the User Dashboard or Permanently Deleted from the Database.
+• Virtual Tours can also be "shared" to Facebook and LinkedIn directly from the Users Dashboard.
+• Vitual Tours can be Navigated by changing rooms via the clickable buttons with the Room Names printed in them. When a button is clicked the image in the viewer changes to the appropriate room.
+• A user can Logout (Have a great day!)
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
