@@ -28,34 +28,25 @@ MyListing360 is an easy to use Virtual Tour builder and hosting site for Real Es
 
 2. `cd` into the `site360` directory
 
-3. You will need to add the
+3. You will need to Create the Database folder and add the content stored on the Google Doc.
+   • In the site360 Root Directory `mkdir api` then `cd api`
 
-## Learn More
+   • Create the file via `touch site360.json`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   • Open the site360.json file and copy the data from the google drive doc: https://docs.google.com/document/d/1LBcrpU9r_wHGfENLMlDCNz2CPATvSSmZWoCiuljkBOg/edit?usp=sharing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. Start the App by running `npm start` in the site360 ROOT directory.
 
-### Code Splitting
+5. Start the server with `json-server -p 5002 -w site360.json`
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Happy exploring in Virtual Reality!
 
-### Analyzing the Bundle Size
+## Technologies Implmented in MyListing360
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+1. React framework via `Create React App.`
 
-### Making a Progressive Web App
+2. A-FRAME for the Virtual Reality display element.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+3. Cloudinary for Image hosting
 
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+4. Google Analytics for tracking User Interactions

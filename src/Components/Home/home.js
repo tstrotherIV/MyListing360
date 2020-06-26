@@ -81,7 +81,7 @@ const HomePage = (props) => {
             zIndex: "-1",
           }}
         >
-          <source src="https://res.cloudinary.com/duo4xxmj8/video/upload/v1592846190/360Video/VR360_Video_1_wih5ch.mp4" />
+          <source src="" />
         </video>
 
         <section className="AccessSect ">

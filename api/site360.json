@@ -6,40 +6,12 @@
       "lastName": "Decker",
       "username": "Jake",
       "password": 1234
-    },
-    {
-      "id": 2,
-      "firstName": "Tammy",
-      "lastName": "Wise",
-      "username": "Tammy",
-      "password": 1234
-    },
-    {
-      "firstName": "Timmy",
-      "lastName": "Stringer",
-      "username": "Timmy",
-      "password": "1234",
-      "id": 3
-    },
-    {
-      "firstName": "Smokey",
-      "lastName": "Robinson",
-      "username": "Smokey",
-      "password": "1234",
-      "id": 4
-    },
-    {
-      "firstName": "Jacob",
-      "lastName": "Smith",
-      "username": "Jacob",
-      "password": "4321",
-      "id": 5
     }
   ],
   "photoAlbums": [
     {
       "id": 1,
-      "title": "1234 Daven Drive, Nashville TN 37211",
+      "title": "Daven Drive, Nashville TN 37211",
       "description": "Don't wait to see this ONE-OF-A-KIND, CUSTOM BUILT home in lovely, highly-desirable CLERMONT LAKEVIEW HILLS subdivision, ON A LARGE LOT. BEAUTIFUL VIEWS OF LAKE MINNEHAHA from virtually every room in this home! OPEN FLOOR PLAN with a Great Room that features sweeping panoramic windows facing the lake, warm & welcoming indirect lighting, updated ceiling fans and Travertine floors. SPLIT FLOOR PLAN has bedrooms at opposite ends of the home, for privacy, and each has sliding glass doors through which you can access a balcony overlooking the lake. ROOF 2016. The kitchen features STAINLESS STEEL APPLIANCES (2018) and custom cabinetry. New ceiling fans and energy-efficient LED lighting; updated, easy maintenance landscaping. OVERSIZED GARAGE affords plenty of room for a work area PLUS 2 vehicles. Residents of this HOA enjoy DIRECT LAKE ACCESS via a community dock on Minnehaha, only a few hundred yards from your front door. Close to Clermont shopping, services and the West Orange bike trail. Make an appointment today to see this unique designer home.",
       "userId": 1,
       "trash": false,
@@ -52,38 +24,6 @@
       "userId": 1,
       "trash": false,
       "views": 1
-    },
-    {
-      "title": "983 Groveland St, Nashville TN 37211",
-      "description": "Rare opportunity to own a classic home built in 1925 in downtown Clermont. This 3 bed 2 bath home boasts original hardwood floors, metal roof, 9 foot ceilings as well as wood burning fireplace. Additional space for a home office as well. Oversized quiet lot on a mature tree lined street. Right down the road is access to 2 community boat ramps. This home is minutes from historic downtown Clermont, newly revitalized with many dining and entertainment options including a weekly farmers market. This is your opportunity to be at the center of everything. Close to shopping. Easy access to major roadways, downtown Orlando and Disney area attractions. Call now to schedule your showing!. All information provided is not guaranteed and the buyer should verify all information.",
-      "userId": 2,
-      "id": 3,
-      "trash": false,
-      "views": 0
-    },
-    {
-      "title": "2335 Addison Ave, Clermont, FL 34711",
-      "description": "St. Laurent model with a spectacular view of the 5th green on the Ridge Course and wonderful street appeal. Hyper allergenic A/C 2013, salt water treatment 2015 and Rheem High Performance water heater 2/18. A leaded and beveled glass front door with side panels welcomes you into this bright natural lighted home. All new paint on walls, ceilings, baseboards and doors make this move-in ready. The 3rd bedroom could be a den/study. Maple cabinets, tile on the diagonal and new stainless steel appliances make the kitchen with its recessed lighting a delight to work in. There are cabinets and a closet in the laundry room, extra shelving and a work bench in the garage and Hurricane shutters are on the east side of the home. A termite bond with Apex is transferable. Homeowner dues include a 24 hour guard gated golf community, escrow reserves, basic cable, complete lawn care including watering, fertilization and mulching and use of the multi-million dollar clubhouse with its 3 pools, 2 fitness centers and tennis, basketball, shuffleboard, pickle ball and bocce courts. The grand ballroom hosts plays, dances and movies while there are craft, billiard, computer and card rooms along with a library. If classes are what you are looking for, Kings Ridge has them all from floral arranging to investing; but if travel is your desire, planned trips are available. You can even drive your golf cart to food shopping, hair, nail or doctor appointments, several banks and restaurants. If this is not enough, the exterior of your home is painted every 5-6 years. Kings Ridge also has an 18 hole Champions Course and 18 hole Ridge Course.",
-      "userId": 1,
-      "trash": false,
-      "id": 4,
-      "views": 0
-    },
-    {
-      "title": "Trash Tour Test",
-      "description": "Trash Tour Test",
-      "userId": 1,
-      "trash": true,
-      "id": 5,
-      "views": 0
-    },
-    {
-      "title": "9340 Ivywood St, Clermont, FL 34711",
-      "description": "Become the second owners of this beautiful, smoking free, and move-in ready home. It shines and it sparkles, from the gourmet kitchen with a huge granite island, to the tile floors throughout the common areas of the house. The common areas are not the only parts of the house with upgraded flooring. Luxury Vinyl Plank flooring was installed in the master bedroom, the master walk-in closet and the bonus room in 2018. That master walk-in also has a custom closet system with shelving galore, installed in 2017. The outside of the house was repainted in 2019 and the inside was painted this year, both still look clean and fresh. Enjoy the additional perks of a fully fenced in backyard, done in 2016, and a whole house water filtration system, added in 2018. This location is an outdoor persons delight with quick access to Little Lake Nellie, Lake Nellie, Lake Louisa and Lake Louisa State Park. So get a bike, get a kayak, and enjoy what natural Florida has to offer.",
-      "userId": 5,
-      "trash": false,
-      "views": 0,
-      "id": 6
     }
   ],
   "VRimages": [
@@ -105,131 +45,67 @@
     },
     {
       "userId": 1,
-      "photoAlbumId": 2,
+      "photoAlbumId": 1,
       "name": "Living Room",
       "description": "Very Big Room!",
-      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592511466/360imgFolder/Living_Room_kmizpa.jpg",
+      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592511033/360imgFolder/master_bedroom_uddfqj.jpg",
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "photoAlbumId": 1,
+      "name": "Master Bedroom",
+      "description": "Large Master Bedroom with new floor",
+      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592511032/360imgFolder/guest_bathroom_lff1ne.jpg",
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "photoAlbumId": 1,
+      "name": "Garage",
+      "description": "2 Car garage for all the toys",
+      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592317375/360imgFolder/euxhndw9l3immbncddom.jpg",
       "id": 5
     },
     {
       "userId": 1,
       "photoAlbumId": 2,
+      "name": "Living Room",
+      "description": "Nice open area for gathering",
+      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592511033/360imgFolder/upstairs_living_room_jhg2rs.jpg",
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "photoAlbumId": 2,
+      "name": "Front Entry Door",
+      "description": "Nice views of the property",
+      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592511033/360imgFolder/front_door_ra5bmi.jpg",
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "photoAlbumId": 2,
+      "name": "Living Room",
+      "description": "Very Big Room!",
+      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592511033/360imgFolder/master_bedroom_uddfqj.jpg",
+      "id": 8
+    },
+    {
+      "userId": 1,
+      "photoAlbumId": 2,
       "name": "Master Bedroom",
       "description": "Large Master Bedroom with new floor",
-      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592511466/360imgFolder/Master_Bedroom_o5kolf.jpg",
-      "id": 6
+      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592511032/360imgFolder/guest_bathroom_lff1ne.jpg",
+      "id": 9
     },
     {
       "userId": 1,
       "photoAlbumId": 2,
       "name": "Garage",
       "description": "2 Car garage for all the toys",
-      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592511466/360imgFolder/Garage_l6rxjk.jpg",
-      "id": 7
-    },
-    {
-      "userId": 1,
-      "photoAlbumId": 3,
-      "name": "Living Room",
-      "description": "Very Big Room!",
-      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592511466/360imgFolder/Living_Room_kmizpa.jpg",
-      "id": 8
-    },
-    {
-      "userId": 1,
-      "photoAlbumId": 3,
-      "name": "Master Bedroom",
-      "description": "Large Master Bedroom with new floor",
-      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592511466/360imgFolder/Master_Bedroom_o5kolf.jpg",
-      "id": 9
-    },
-    {
-      "userId": 1,
-      "photoAlbumId": 3,
-      "name": "Garage",
-      "description": "2 Car garage for all the toys",
-      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592511466/360imgFolder/Garage_l6rxjk.jpg",
+      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592317375/360imgFolder/euxhndw9l3immbncddom.jpg",
       "id": 10
-    },
-    {
-      "userId": 1,
-      "photoAlbumId": 1,
-      "name": "Guest Bathroom",
-      "description": "asdf",
-      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592577042/360imgFolder/c4ypaw0qt8qfxdprc9ty.jpg",
-      "id": 12
-    },
-    {
-      "userId": 1,
-      "photoAlbumId": 4,
-      "name": "Living Room",
-      "description": "newly remodeled",
-      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592936757/360imgFolder/kqmpjysbvx1geoozfukx.jpg",
-      "id": 13
-    },
-    {
-      "userId": 1,
-      "photoAlbumId": 4,
-      "name": "Master Bedroom",
-      "description": "Large Updated Space",
-      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592936796/360imgFolder/wjdxtq0r1wfcscito5hr.jpg",
-      "id": 14
-    },
-    {
-      "userId": 1,
-      "photoAlbumId": 4,
-      "name": "Garage",
-      "description": "2 Car Garage",
-      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592936819/360imgFolder/ketktcb3hytjxc0oi1n1.jpg",
-      "id": 15
-    },
-    {
-      "userId": 1,
-      "photoAlbumId": 5,
-      "name": "Garage",
-      "description": "2 Car Garage",
-      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1593017544/360imgFolder/hagm5cicp0j2tigbhogv.jpg",
-      "id": 16
-    },
-    {
-      "userId": 1,
-      "photoAlbumId": 1,
-      "name": "Living Room",
-      "description": "newly remodeled",
-      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592936757/360imgFolder/kqmpjysbvx1geoozfukx.jpg",
-      "id": 17
-    },
-    {
-      "userId": 1,
-      "photoAlbumId": 1,
-      "name": "Master Bedroom",
-      "description": "Large Updated Space",
-      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592936796/360imgFolder/wjdxtq0r1wfcscito5hr.jpg",
-      "id": 18
-    },
-    {
-      "userId": 1,
-      "photoAlbumId": 1,
-      "name": "Garage",
-      "description": "2 Car Garage",
-      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592936819/360imgFolder/ketktcb3hytjxc0oi1n1.jpg",
-      "id": 19
-    },
-    {
-      "userId": 1,
-      "photoAlbumId": 1,
-      "name": "Garage",
-      "description": "2 Car Garage",
-      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1593017544/360imgFolder/hagm5cicp0j2tigbhogv.jpg",
-      "id": 20
-    },
-    {
-      "userId": 5,
-      "photoAlbumId": 6,
-      "name": "Living Room",
-      "description": "It has great painted concrete floors",
-      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1593101599/360imgFolder/gdx7funk38ro0ivflbkt.jpg",
-      "id": 21
     }
   ]
 }
