@@ -1,3 +1,5 @@
+![alt text](https://res.cloudinary.com/duo4xxmj8/image/upload/v1591990304/Site360%20Static%20Images/navbarLogo_rspfdq.png)
+
 ## Mylisting360
 
 MyListing360 is a virtual tour generator created for Real Estate Agents needing a creative way to represent homes in an immersive way in order to provide a virutal walk through remotely to prospective buyers. After this applicaiton is fully installed a Real Estate agent is able to create a user account where they can then build virtual tours of their listings with 360 degree images taken via a Ricoh Thata V or any other 360 camera. After a tour is fully built with Images and appropriate room descriptions a complete tour can then be shared via a URL, or on Socail platforms like Facebook and Linkedin.
