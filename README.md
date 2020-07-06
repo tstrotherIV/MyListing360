@@ -6,22 +6,25 @@ MyListing360 is a virtual tour generator created for Real Estate Agents needing 
 
 **Getting Started**
 
-1. In your computer terminal create, name, and then open a new folder for your project. Then use the follwing command to clone the Repo to your newly created folder. `git clone git@github.com:tstrotherIV/Site360.git`
+1. In your computer terminal you will create and name a new folder for your project. After it is created you will need to open that folder and then use the follwing command to clone the Repo to your newly created folder. `git clone git@github.com:tstrotherIV/Site360.git`
 
-2. After everything has been installed, open the root of the new project Repo folder `site360`
+2. After the Repo has been cloned down you should see a new project folder named `site360`.
 
-3. Before you can begin workign with the Repo you will need to create a Database folder, a JSON file, and then add some starting content to a JSON file. The starter data is stored on a Google Doc for getting started quickly. Below are the steps to complete step 3.
-   • In the site360 Root Directory `mkdir api` then `cd api`
+3. Before you can begin working with the Repo you will need to create a Database folder named `API` with a JSON file named `site360.json` inside that API folder. Make sure you do this in the root of the `site360` project. As a helper you can use the following code in your terminal to do these steps.
 
-   • Create the JSON database file via the following terminal command `touch site360.json`
+•In the root of the Project use your terminal to execute: `mkdir api` then `cd api`.
 
-   • After you have created the folder and the JSON file open the site360.json file in your code editor and copy the data from the google drive doc into the file: https://docs.google.com/document/d/1LBcrpU9r_wHGfENLMlDCNz2CPATvSSmZWoCiuljkBOg/edit?usp=sharing
+•Then copy/paste `touch site360.json` to create the file where the data will be stored.
 
-4. Now everything you need should be installed and your ready to get things going! In the site360 ROOT directory, start the App by running `npm start` in your terminal.
+•The project requires some starter data for the JSON file which is stored on a Google Doc. To add this information open the site360.json file in your code editor and copy and paste the data from the google drive doc into the `site360.json` file: https://docs.google.com/document/d/1LBcrpU9r_wHGfENLMlDCNz2CPATvSSmZWoCiuljkBOg/edit?usp=sharing
 
-5. Start the JSON database server with the following command in your terminal: `json-server -p 5002 -w site360.json`
+Now everything you need should be installed and your ready to get things going!
 
-## Thats it! You should now be up and runnning! Happy creating and exploring in Virtual Reality!
+4. In the site360 ROOT directory, start the React App by running `npm start` in your terminal.
+
+5. A JSON server is required for operating MyListing360 locally. To do this start the JSON database server with the following command in your terminal: `json-server -p 5002 -w site360.json`
+
+## Thats it! You should now be up and runnning with the fully functioning App in your browser! Happy creating and exploring in Virtual Reality!
 
 ### What can you do with this Application?
 
