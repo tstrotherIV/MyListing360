@@ -13,10 +13,6 @@ const HomePage = (props) => {
     password: "",
   });
 
-  // const { className } = props;
-
-  // const toggle = () => setModal(!modal);
-
   const handleFieldChange = (evt) => {
     const stateToChange = { ...credentials };
     stateToChange[evt.target.id] = evt.target.value;
