@@ -46,31 +46,23 @@
     {
       "userId": 1,
       "photoAlbumId": 1,
-      "name": "Living Room",
-      "description": "Very Big Room!",
-      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592511033/360imgFolder/master_bedroom_uddfqj.jpg",
-      "id": 3
-    },
-    {
-      "userId": 1,
-      "photoAlbumId": 1,
-      "name": "Master Bedroom",
-      "description": "Large Master Bedroom with new floor",
+      "name": "Guest Bathroom",
+      "description": "New vanity sink",
       "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592511032/360imgFolder/guest_bathroom_lff1ne.jpg",
       "id": 4
     },
     {
       "userId": 1,
       "photoAlbumId": 1,
-      "name": "Garage",
-      "description": "2 Car garage for all the toys",
+      "name": "Downstairs Living Room",
+      "description": "Spacious room for entertainging",
       "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592317375/360imgFolder/euxhndw9l3immbncddom.jpg",
       "id": 5
     },
     {
       "userId": 1,
       "photoAlbumId": 2,
-      "name": "Living Room",
+      "name": "Main Living Room",
       "description": "Nice open area for gathering",
       "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592511033/360imgFolder/upstairs_living_room_jhg2rs.jpg",
       "id": 6
@@ -82,30 +74,6 @@
       "description": "Nice views of the property",
       "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592511033/360imgFolder/front_door_ra5bmi.jpg",
       "id": 7
-    },
-    {
-      "userId": 1,
-      "photoAlbumId": 2,
-      "name": "Living Room",
-      "description": "Very Big Room!",
-      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592511033/360imgFolder/master_bedroom_uddfqj.jpg",
-      "id": 8
-    },
-    {
-      "userId": 1,
-      "photoAlbumId": 2,
-      "name": "Master Bedroom",
-      "description": "Large Master Bedroom with new floor",
-      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592511032/360imgFolder/guest_bathroom_lff1ne.jpg",
-      "id": 9
-    },
-    {
-      "userId": 1,
-      "photoAlbumId": 2,
-      "name": "Garage",
-      "description": "2 Car garage for all the toys",
-      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592317375/360imgFolder/euxhndw9l3immbncddom.jpg",
-      "id": 10
     }
   ]
 }
