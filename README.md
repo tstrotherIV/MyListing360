@@ -1,4 +1,4 @@
-![](https://res.cloudinary.com/duo4xxmj8/image/upload/v1591990304/Site360%20Static%20Images/navbarLogo_rspfdq.png)
+![site logo](https://res.cloudinary.com/duo4xxmj8/image/upload/v1591990304/Site360%20Static%20Images/navbarLogo_rspfdq.png)
 
 ## Mylisting360
 
@@ -26,7 +26,7 @@ Now everything you need should be installed and your ready to get things going!
 
 ## Thats it! You should now be up and runnning with the fully functioning App in your browser! Happy creating and exploring in Virtual Reality!
 
-![](https://media.giphy.com/media/fXKmBpg2gTkb2vblVB/giphy.gif)
+![Watch video](https://media.giphy.com/media/fXKmBpg2gTkb2vblVB/source.mp4)
 
 ### What can you do with this Application?
 
@@ -60,4 +60,4 @@ Now everything you need should be installed and your ready to get things going!
 
 ## ERD Diagram of the Data Relationships
 
-![](https://res.cloudinary.com/duo4xxmj8/image/upload/v1594049992/Site360%20Static%20Images/Screen_Shot_2020-07-06_at_10.38.13_AM_qlsikk.png)
+![Project ERD](https://res.cloudinary.com/duo4xxmj8/image/upload/v1594049992/Site360%20Static%20Images/Screen_Shot_2020-07-06_at_10.38.13_AM_qlsikk.png)
