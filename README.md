@@ -1,4 +1,4 @@
-![alt text](https://res.cloudinary.com/duo4xxmj8/image/upload/v1591990304/Site360%20Static%20Images/navbarLogo_rspfdq.png)
+![](https://res.cloudinary.com/duo4xxmj8/image/upload/v1591990304/Site360%20Static%20Images/navbarLogo_rspfdq.png)
 
 ## Mylisting360
 
@@ -25,6 +25,8 @@ Now everything you need should be installed and your ready to get things going!
 5. A JSON server is required for operating MyListing360 locally. To do this start the JSON database server with the following command in your terminal: `json-server -p 5002 -w site360.json`
 
 ## Thats it! You should now be up and runnning with the fully functioning App in your browser! Happy creating and exploring in Virtual Reality!
+
+![](https://media.giphy.com/media/fXKmBpg2gTkb2vblVB/giphy.gif)
 
 ### What can you do with this Application?
 
@@ -55,3 +57,7 @@ Now everything you need should be installed and your ready to get things going!
 3. Cloudinary for Image hosting
 
 4. Google Analytics for tracking User Interactions
+
+## ERD Diagram of the Data Relationships
+
+![](https://res.cloudinary.com/duo4xxmj8/image/upload/v1594049992/Site360%20Static%20Images/Screen_Shot_2020-07-06_at_10.38.13_AM_qlsikk.png)
