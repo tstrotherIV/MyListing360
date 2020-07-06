@@ -26,8 +26,6 @@ Now everything you need should be installed and your ready to get things going!
 
 ## Thats it! You should now be up and runnning with the fully functioning App in your browser! Happy creating and exploring in Virtual Reality!
 
-![Watch video](https://media.giphy.com/media/fXKmBpg2gTkb2vblVB/source.mp4)
-
 ### What can you do with this Application?
 
 • Create a new User Account
