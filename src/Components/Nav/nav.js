@@ -40,7 +40,11 @@ const NavBar = (props) => {
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar>
               <NavItem>
-                <span className="nav-link" onClick={toursWithUserId}>
+                <span
+                  className="nav-link"
+                  activeClassName="main-nav-active"
+                  onClick={toursWithUserId}
+                >
                   {" "}
                   MyTours{" "}
                 </span>
