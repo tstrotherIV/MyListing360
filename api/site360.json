@@ -24,6 +24,14 @@
       "userId": 1,
       "trash": false,
       "views": 1
+    },
+    {
+      "title": "5156 W Oak Highland Dr, Summertown, TN 55555",
+      "description": "Wonderful brick home on a cul-de-sac in a convenient Antioch location--easy to Brentwood, Nashville, and very close to Hickory Hollow. Big ticket items are quite new--roof is only 5 years old and HVAC is brand new in 2020. Freshly painted interior. Walk-in attic and large bonus room. Owner's suite offers access to back deck. Property backs up to wooded open space. Antioch is booming, and this home is an excellent investment.",
+      "userId": 1,
+      "trash": false,
+      "views": 0,
+      "id": 3
     }
   ],
   "VRimages": [
@@ -74,6 +82,14 @@
       "description": "Nice views of the property",
       "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1592511033/360imgFolder/front_door_ra5bmi.jpg",
       "id": 7
+    },
+    {
+      "userId": 1,
+      "photoAlbumId": 3,
+      "name": "Living Room",
+      "description": "Fresh Paint Everywhere with newly painted concrete floors.",
+      "url": "https://res.cloudinary.com/duo4xxmj8/image/upload/v1594131384/360imgFolder/cpkyqlghuetihe0r9uos.jpg",
+      "id": 8
     }
   ]
 }
