@@ -1,6 +1,12 @@
+.tourMenuBtns {
+  display: flex;
+  flex-direction: column;
+}
+
 .aframebox1 {
-  height: 800px;
-  width: 1500px;
+  min-height: 500px;
+  max-height: 600px;
+  min-width: 100%;
   box-shadow: 5px 10px 7px #888888;
   margin-top: 10px;
 }
@@ -36,7 +42,7 @@
   left: 16px;
   font-size: 18px;
 }
-.topright {
+.bottomright {
   position: absolute;
   bottom: 10px;
   right: 5px;
