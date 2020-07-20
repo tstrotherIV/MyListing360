@@ -1,4 +1,4 @@
-const remoteURL = "https://mylisting360api.herokuapp.com/";
+const remoteURL = "https://mylisting360api.herokuapp.com";
 
 export default {
   get(id, resource, expand) {
